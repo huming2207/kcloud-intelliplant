@@ -13,7 +13,7 @@ It's an Arduino based open source crop auto-managing system.
 
 这是一个基于Arduino的开源农作物管理系统
 
-The project mainly maintained by Jackson Ming Hu in KGCTU, Techonology Clubs Union of Shenzhen Highschool of Science.
+The project mainly maintained by Jackson Ming Hu in KGTCU, Techonology Clubs Union of Shenzhen Highschool of Science.
 
 此项目主要由深圳科学高中技术社团联合会的 胡铭 负责维护更新。
 
