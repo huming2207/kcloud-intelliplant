@@ -24,7 +24,7 @@ float FinalVoltage;
 float FinalDustDesity;
 String SerialIn;
 int SerialReadMark;
-int SerialNumData[8] = {0};
+float SerialNumData[8] = {0};
 
 int RelayControl = 10;
 
@@ -94,7 +94,7 @@ void loop(){
            8 = Debug mode ON/OFF
            9 = Force relay ON/OFF
           ******************************************************************************** */ 
-        switch (SerialNumData[0]) {  
+        switch (int(SerialNumData[0])) {  
         case 1:
           set_time();
           break;
