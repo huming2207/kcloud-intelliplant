@@ -1,0 +1,24 @@
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe.config
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.pdb
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.xml
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form1.resources
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Resources.resources
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.GenerateResource.Cache
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.exe
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.xml
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.pdb
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form2.resources
+F:\项目\KCloud IntelliPlant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.AboutBox1.resources
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe.config
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.exe
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.xml
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.pdb
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.pdb
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.xml
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.AboutBox1.resources
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form1.resources
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form2.resources
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Resources.resources
+F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.GenerateResource.Cache
