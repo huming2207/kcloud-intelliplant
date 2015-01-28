@@ -10,8 +10,12 @@ dht DHT;
 Adafruit_BMP085 BMP085;
 DS3231 RTClock;
 
+#include <avr/eeprom.h>
+#define EEPROM_write(address, var) eeprom_write_block((const void *)&(var), (void *)(address), sizeof(var))
+#define EEPROM_read(address, var) eeprom_read_block((void *)&(var), (const void *)(address), sizeof(var)) 
+
 int AirData = 0; // VOut from SHARP dust sensor
-int AirLED = 2; // LED V-in to SHARP dust sensor
+int AirLED = 3; // LED V-in to SHARP dust sensor
 int PulseTime = 280; // Main pulse time
 int WaitTime = 40; // Halt time 1
 int WaitTime1 = 9680; //Halt time 2
@@ -22,24 +26,15 @@ String SerialIn;
 int SerialReadMark;
 int SerialNumData[8] = {0};
 
+int RelayControl = 10;
+
 void setup(){
       Serial.begin(9600);
       pinMode(AirLED,OUTPUT);
+      pinMode(RelayControl,OUTPUT);
 }
 
-void set_time(){
-   Serial.print("RTC: Got a new RTC time, set it to DS3221...");
-   Wire.begin();
-   RTClock.setClockMode(false); // Set the RTC to "24-hour-per-day" format.
-   RTClock.setSecond(SerialNumData[7]); 
-   RTClock.setMinute(SerialNumData[6]); 
-   RTClock.setHour(SerialNumData[5]);   
-   RTClock.setDoW(SerialNumData[4]);    
-   RTClock.setDate(SerialNumData[3]);   
-   RTClock.setMonth(SerialNumData[2]);  
-   RTClock.setYear(SerialNumData[1]); 
-   Serial.println("...Command finished!");
-}
+
 
 
 void loop(){
@@ -57,13 +52,13 @@ void loop(){
 	Serial.println(FinalDustDesity); 
         delay(150);
         Serial.print("H");
-        Serial.println(DHT.humidity, 1);
+        Serial.println(DHT.humidity);
         delay(150);
         Serial.print("T");
-        Serial.println(DHT.temperature, 1);
+        Serial.println(DHT.temperature);
         delay(150);
         Serial.print("P");
-        Serial.println(BMP085.readPressure(),1);
+        Serial.println(BMP085.readPressure());
         delay(150);
 
 
@@ -108,8 +103,35 @@ void loop(){
           set_time();
           break;
         case 2:
-          
+          set_relay_1();
           break;
+        case 3:
+          set_relay_2();
+          break;
+        case 4:
+          set_relay_3();
+          break;
+        case 5:
+          set_relay_4();
+          break;
+        case 6:
+          set_relay_5();
+          break;
+        case 7:
+          set_relay_6();
+          break;
+        case 8:
+          set_debug_mode();
+          break;
+        case 9:
+          if (SerialNumData[1] > 0)
+          {
+              digitalWrite(RelayControl,HIGH); 
+          }
+          else
+          {
+              digitalWrite(RelayControl,LOW); 
+          }
         default: 
           break;
         }
