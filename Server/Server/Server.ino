@@ -47,19 +47,15 @@ void loop(){
 	delayMicroseconds(WaitTime1);
 	FinalVoltage = vM * (5.0 / 1024.0); 
 	FinalDustDesity = 0.17 * FinalVoltage - 0.1; 
-        Serial.println("");
-	Serial.print("D");
-	Serial.println(FinalDustDesity); 
-        delay(150);
-        Serial.print("H");
-        Serial.println(DHT.humidity);
-        delay(150);
-        Serial.print("T");
-        Serial.println(DHT.temperature);
-        delay(150);
-        Serial.print("P");
+	Serial.print("1,");
+	Serial.print(FinalDustDesity); 
+        Serial.print(",");
+        Serial.print(DHT.humidity);
+        Serial.print(",");
+        Serial.print(DHT.temperature);
+        Serial.print(",");
         Serial.println(BMP085.readPressure());
-        delay(150);
+        delay(300);
 
 
         int j = 0;

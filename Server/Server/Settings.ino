@@ -1,15 +1,13 @@
 void set_time(){
-     Serial.print("RTC: Got a new RTC time, set it to DS3221...");
-     Wire.begin();
-     RTClock.setClockMode(false); // Set the RTC to "24-hour-per-day" format.
-     RTClock.setSecond(SerialNumData[7]); 
-     RTClock.setMinute(SerialNumData[6]); 
-     RTClock.setHour(SerialNumData[5]);   
-     RTClock.setDoW(SerialNumData[4]);    
-     RTClock.setDate(SerialNumData[3]);   
-     RTClock.setMonth(SerialNumData[2]);  
-     RTClock.setYear(SerialNumData[1]); 
-     Serial.println("...Command finished!");
+   Wire.begin();
+   RTClock.setClockMode(false); // Set the RTC to "24-hour-per-day" format.
+   RTClock.setSecond(SerialNumData[7]); 
+   RTClock.setMinute(SerialNumData[6]); 
+   RTClock.setHour(SerialNumData[5]);   
+   RTClock.setDoW(SerialNumData[4]);    
+   RTClock.setDate(SerialNumData[3]);   
+   RTClock.setMonth(SerialNumData[2]);  
+   RTClock.setYear(SerialNumData[1]); 
 }
 
 void set_relay_1(){
