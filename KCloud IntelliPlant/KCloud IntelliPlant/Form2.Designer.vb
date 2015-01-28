@@ -36,11 +36,11 @@ Partial Class Form2
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -245,11 +245,11 @@ Partial Class Form2
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button10)
         Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Controls.Add(Me.Button3)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.Label10)
-        Me.GroupBox4.Controls.Add(Me.TextBox3)
         Me.GroupBox4.Controls.Add(Me.Label9)
         Me.GroupBox4.Controls.Add(Me.TextBox2)
         Me.GroupBox4.Controls.Add(Me.Label8)
@@ -261,6 +261,15 @@ Partial Class Form2
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "网络连接与云平台设置"
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(90, 86)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(233, 31)
+        Me.Button10.TabIndex = 10
+        Me.Button10.Text = "Yeelink设置"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -298,14 +307,6 @@ Partial Class Form2
         Me.Label10.Size = New System.Drawing.Size(41, 12)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "状态："
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox3.Size = New System.Drawing.Size(233, 21)
-        Me.TextBox3.TabIndex = 5
         '
         'Label9
         '
@@ -1081,7 +1082,6 @@ Partial Class Form2
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
@@ -1150,4 +1150,5 @@ Partial Class Form2
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
 End Class
