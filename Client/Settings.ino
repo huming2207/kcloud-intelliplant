@@ -100,19 +100,21 @@ void YeelinkSensorSave5()
       }
 }
 
-void YeelinkSensorSave6()
+void YeelinkDeviceIDSave()
 {
       if (SerialIn[0] == 'F')
       {
         
-        DebugSerial.println("New Yeelink sensor ID has been received.");
+        DebugSerial.println("New Yeelink Self-device ID has been received.");
         DebugSerial.print("The new ID is:");
         DebugSerial.println(SerialIn);
           for(unsigned int i = 1; i <= SerialIn.length() ; i++)
           {
-               YeelinkSensor6 += SerialIn[i];  //Put the SerialIn data to YeelinkID without the identify word "F"
+               YeelinkDeviceID += SerialIn[i];  //Put the SerialIn data to YeelinkID without the identify word "F"
           }
-       EEPROM_write(70,YeelinkSensor6);
-       DebugSerial.println("New Yeelink sensor ID has been successfully saved");
+       EEPROM_write(70,YeelinkDeviceID);
+       DebugSerial.println("New Yeelink device ID has been successfully saved");
       }
 }
+
+

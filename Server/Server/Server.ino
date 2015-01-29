@@ -23,7 +23,6 @@ float vM;
 float FinalVoltage;
 float FinalDustDesity;
 String SerialIn;
-int SerialReadMark;
 float SerialNumData[8] = {0};
 
 int RelayControl = 10;
@@ -63,12 +62,10 @@ void loop(){
         {
             SerialIn += char(Serial.read());
             delay(2);
-            SerialReadMark = 1;
         }
         
-       if(SerialReadMark == 1)  
-       {
-          Serial.println(SerialIn);             
+       if(SerialIn.length() > 0)  
+       {       
           for(unsigned int i = 0; i < SerialIn.length() ; i++)
           {
             if(SerialIn[i] == ',')
@@ -136,7 +133,6 @@ void loop(){
         {
    	    SerialNumData[i] = 0;
         }
-        SerialReadMark = 0;
       }
 
 
