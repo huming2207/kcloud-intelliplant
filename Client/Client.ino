@@ -128,7 +128,19 @@ void loop()
           ******************************************************************************** */ 
         switch (int(SerialNumData[0])) {  
         case 1:
-
+          
+          if((millis() - lastConnectionTime > postingInterval)) {
+             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor1,SerialNumData[1]);
+             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor2,SerialNumData[2]);
+             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor3,SerialNumData[3]);
+             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor4,SerialNumData[4]);
+             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor5,SerialNumData[5]);
+             char message[400];
+             if(wifi.ReceiveMessage(message)) 
+             {
+                DebugSerial.println(message);   
+             }
+           }
           break;
         default: 
           break;
@@ -140,13 +152,8 @@ void loop()
         }
       }
     }
-    char message[400];
 
-    if((millis() - lastConnectionTime > postingInterval)) {
-       sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor1,SerialNumData[1]);
-       sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor2,SerialNumData[2]);
-       sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor3,SerialNumData[3]);
-       sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor4,SerialNumData[4]);
-       sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor5,SerialNumData[5]);
-    }
+
+
+    
 }
