@@ -37,34 +37,10 @@ void set_relay_3(){
   EEPROM_write(18, SerialNumData[6]); // Auto ON/OFF
 }
 
-void set_relay_4(){
-  EEPROM_write(19, SerialNumData[1]); // Hr
-  EEPROM_write(20, SerialNumData[2]); // Min
-  EEPROM_write(21, SerialNumData[3]); // Sec
-  EEPROM_write(22, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(23, SerialNumData[5]); // ON/OFF
-  EEPROM_write(24, SerialNumData[6]); // Auto ON/OFF
-}
-
-void set_relay_5(){
-  EEPROM_write(25, SerialNumData[1]); // Hr
-  EEPROM_write(26, SerialNumData[2]); // Min
-  EEPROM_write(27, SerialNumData[3]); // Sec
-  EEPROM_write(28, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(29, SerialNumData[5]); // ON/OFF
-  EEPROM_write(30, SerialNumData[6]); // Auto ON/OFF
-}
-
-void set_relay_6(){
-  EEPROM_write(31, SerialNumData[1]); // Hr
-  EEPROM_write(32, SerialNumData[2]); // Min
-  EEPROM_write(33, SerialNumData[3]); // Sec
-  EEPROM_write(34, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(35, SerialNumData[5]); // ON/OFF
-  EEPROM_write(36, SerialNumData[6]); // Auto ON/OFF
-}
-
-void set_debug_mode(){
-  EEPROM_write(37, SerialNumData[1]); // 1 == Debug mode ON, 0 == Debug mode OFF.
+void set_weather_ratio(){
+  EEPROM_write(20, SerialNumData[1]); // Temperature ratio
+  EEPROM_write(21, SerialNumData[1]); // Humidity ratio
+  EEPROM_write(22, SerialNumData[1]); // Air dust ratio
+  EEPROM_write(23, SerialNumData[1]); // Air pressure ratio
 }
 

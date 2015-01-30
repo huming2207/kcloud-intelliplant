@@ -9,6 +9,8 @@
 dht DHT;
 Adafruit_BMP085 BMP085;
 DS3231 RTClock;
+bool hrs12;
+bool hrsPM12;
 
 #include <avr/eeprom.h>
 #define EEPROM_write(address, var) eeprom_write_block((const void *)&(var), (void *)(address), sizeof(var))
@@ -23,21 +25,46 @@ float vM;
 float FinalVoltage;
 float FinalDustDesity;
 String SerialIn;
-float SerialNumData[8] = {0};
-
+float SerialNumData[9] = {0};
 int RelayControl = 10;
+
+int ScheduleHr;
+int ScheduleMin;
+int ScheduleSec;
+int ScheduleCapacity;
+int ScheduleStatus;
+
+int Sec1;
+int Sec2;
+int Sec3;
+int Min1;
+int Min2;
+int Min3;
+int Hr1;
+int Hr2;
+int Hr3;
+
+int TempRatio;
+int HumidRatio;
+int PressureRatio;
+int DustRatio;
+
+int XWeatherOut;
+int YWeatherOut;
+int AutoSwitch;
 
 void setup(){
       Serial.begin(9600);
       pinMode(AirLED,OUTPUT);
       pinMode(RelayControl,OUTPUT);
+      RTClock.setClockMode(false);
 }
 
 
 
 
 void loop(){
-     
+        RTClock.setClockMode(false);
 	digitalWrite(AirLED,LOW); 
 	delayMicroseconds(PulseTime); 
 	vM = analogRead(AirData); 
@@ -55,8 +82,12 @@ void loop(){
         Serial.print(",");
         Serial.println(BMP085.readPressure());
         delay(300);
-
-
+        
+        /* Check if the time meets the schedule */
+        RelaySchedule1();
+        RelaySchedule2();
+        RelaySchedule3();
+        
         int j = 0;
         while (Serial.available() > 0)
         {
@@ -102,21 +133,9 @@ void loop(){
           set_relay_2();
           break;
         case 4:
-          set_relay_3();
+          set_weather_ratio();
           break;
         case 5:
-          set_relay_4();
-          break;
-        case 6:
-          set_relay_5();
-          break;
-        case 7:
-          set_relay_6();
-          break;
-        case 8:
-          set_debug_mode();
-          break;
-        case 9:
           if (SerialNumData[1] > 0)
           {
               digitalWrite(RelayControl,HIGH); 
