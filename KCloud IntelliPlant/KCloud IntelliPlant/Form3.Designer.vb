@@ -149,7 +149,7 @@ Partial Class Form3
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(107, 12)
         Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Yeelink 传感器#6:"
+        Me.Label7.Text = "Yeelink 传感器#5:"
         '
         'Button1
         '

@@ -85,7 +85,7 @@ void loop(){
         
         /* Check if the time meets the schedule */
         RelaySchedule1();
-        RelaySchedule2();
+       RelaySchedule2();
         RelaySchedule3();
         
         int j = 0;

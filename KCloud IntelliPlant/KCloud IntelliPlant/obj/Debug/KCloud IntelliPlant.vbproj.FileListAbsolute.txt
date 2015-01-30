@@ -22,3 +22,16 @@ F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud Int
 F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form2.resources
 F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Resources.resources
 F:\项目\KCloud IntelliPlant\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.GenerateResource.Cache
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe.config
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.xml
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.pdb
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.pdb
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.xml
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.AboutBox1.resources
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form1.resources
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form2.resources
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form3.resources
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Resources.resources
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.GenerateResource.Cache
+D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.exe

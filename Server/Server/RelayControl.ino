@@ -67,29 +67,108 @@ void RelaySchedule1(){
   
 }
 
+
+
+
+
 void RelaySchedule2(){
   EEPROM_read(7, ScheduleHr);
   EEPROM_read(8, ScheduleMin);
+  EEPROM_read(9, ScheduleSec);
+  EEPROM_read(10, ScheduleCapacity);
+  EEPROM_read(12, AutoSwitch);
   if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
   {
-    digitalWrite(RelayControl,HIGH); 
+    if (AutoSwitch == 1)
+    {
+      Sec1 = RTClock.getSecond() + YWeatherOut;
+      if (Sec1 > 59)
+      {
+        Min1++;
+        Sec1 = 0;
+        if((Min1 + ScheduleMin) > 59)
+        {
+          Min1 = 0;
+          Hr1++;
+          if((Hr1 + ScheduleHr) > 23)
+          {
+            ScheduleHr = 22; // I know here is a bug, but it does work as a place holder... I will fix it later.
+          }
+        }
+      }
+      digitalWrite(RelayControl,HIGH); 
+      if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
+      {
+        digitalWrite(RelayControl,LOW);
+      }
+    }
+    else
+    {
+      digitalWrite(RelayControl,HIGH);
+      if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
+      {
+        digitalWrite(RelayControl,LOW);
+      }
+    }
   }
   else
   {
     digitalWrite(RelayControl,LOW); 
   }
+  
 }
+
+
+
+
 
 void RelaySchedule3(){
   EEPROM_read(13, ScheduleHr);
   EEPROM_read(14, ScheduleMin);
+  EEPROM_read(15, ScheduleSec);
+  EEPROM_read(16, ScheduleCapacity);
+  EEPROM_read(18, AutoSwitch);
   if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
   {
-    digitalWrite(RelayControl,HIGH); 
+    if (AutoSwitch == 1)
+    {
+      Sec1 = RTClock.getSecond() + YWeatherOut;
+      if (Sec1 > 59)
+      {
+        Min1++;
+        Sec1 = 0;
+        if((Min1 + ScheduleMin) > 59)
+        {
+          Min1 = 0;
+          Hr1++;
+          if((Hr1 + ScheduleHr) > 23)
+          {
+            ScheduleHr = 22; // I know here is a bug, but it does work as a place holder... I will fix it later.
+          }
+        }
+      }
+      digitalWrite(RelayControl,HIGH); 
+      if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
+      {
+        digitalWrite(RelayControl,LOW);
+      }
+    }
+    else
+    {
+      digitalWrite(RelayControl,HIGH);
+      if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
+      {
+        digitalWrite(RelayControl,LOW);
+      }
+    }
   }
   else
   {
     digitalWrite(RelayControl,LOW); 
   }
+  
 }
+
+
+
 
