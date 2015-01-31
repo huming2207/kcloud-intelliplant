@@ -37,6 +37,7 @@ int ScheduleMin;
 int ScheduleSec;
 int ScheduleCapacity;
 int ScheduleStatus;
+int ScheduleNum;
 int Sec1;
 int Min1;
 int Hr1;

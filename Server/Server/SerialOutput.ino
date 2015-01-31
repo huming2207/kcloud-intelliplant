@@ -9,3 +9,12 @@ void SerialWeatherOutput(){
   Serial.println(BMP085.readPressure());
   delay(300);
 }
+
+void SerialScheduleOutput(){
+  Serial.print("2,");
+  Serial.print(ScheduleHr); 
+  Serial.print(",");
+  Serial.print(ScheduleMin);
+  Serial.print(",");
+  Serial.print(ScheduleNum);
+}

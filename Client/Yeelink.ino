@@ -39,6 +39,7 @@ void sendData(String device_id, String api_id, String sensor_id,float sensor_dat
     // if you couldn't make a connection:
     DebugSerial.println("...Yeelink connection failed. Disconnected, try again.");
     wifi.closeMux();
+    WifiStatus = 2;
   }
 }
   
@@ -55,4 +56,20 @@ int getLength(int someValue) {
   }
   // return the number of digits:
   return digits;
+}
+
+
+void YeeLinkSendSensorData(){
+     if((millis() - lastConnectionTime > postingInterval)) {
+        sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor1,SerialNumData[1]);
+        sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor2,SerialNumData[2]);
+        sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor3,SerialNumData[3]);
+        sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor4,SerialNumData[4]);
+        sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor5,SerialNumData[5]);
+        char message[400];
+        if(wifi.ReceiveMessage(message)) 
+        {
+          DebugSerial.println(message);   
+        }
+     }
 }

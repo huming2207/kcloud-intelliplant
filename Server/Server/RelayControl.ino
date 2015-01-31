@@ -50,6 +50,8 @@ void RelaySchedule1(){
         }
       }
       digitalWrite(RelayControl,HIGH); 
+      ScheduleNum = 1;
+      SerialScheduleOutput();
       if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
@@ -58,6 +60,8 @@ void RelaySchedule1(){
     else
     {
       digitalWrite(RelayControl,HIGH);
+      ScheduleNum = 1;
+      SerialScheduleOutput();
       if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);
@@ -108,6 +112,8 @@ void RelaySchedule2(){
         }
       }
       digitalWrite(RelayControl,HIGH); 
+      ScheduleNum = 2;
+      SerialScheduleOutput();
       if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
@@ -116,6 +122,8 @@ void RelaySchedule2(){
     else
     {
       digitalWrite(RelayControl,HIGH);
+      ScheduleNum = 2;
+      SerialScheduleOutput();
       if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);
@@ -166,6 +174,8 @@ void RelaySchedule3(){
         }
       }
       digitalWrite(RelayControl,HIGH); 
+      ScheduleNum = 3;
+      SerialScheduleOutput();
       if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
@@ -174,6 +184,8 @@ void RelaySchedule3(){
     else
     {
       digitalWrite(RelayControl,HIGH);
+      ScheduleNum = 3;
+      SerialScheduleOutput();
       if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);

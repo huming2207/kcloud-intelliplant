@@ -15,13 +15,17 @@ String YeelinkSensor3;
 String YeelinkSensor4;
 String YeelinkSensor5;
 String YeelinkDeviceID;
-int SerialReadMark;
-float SerialNumData[8] = {0};
+float SerialNumData[9] = {0};
+
 unsigned long lastConnectionTime = 0;          // last time you connected to the server, in milliseconds
 boolean lastConnected = false;                 // state of the connection last time through the main loop
 const unsigned long postingInterval = 5*1000; 
 String returnValue = ""; 
 boolean ResponseBegin = false;
+
+/* Wifi Status. 
+*/
+int WifiStatus = 0;
 
 LiquidCrystal_I2C lcd(0x27,20,4);  
 WIFI wifi;
@@ -56,6 +60,7 @@ void setup()
       lcd.setCursor(0,2);
       lcd.print("WIFI CONNECTION FAIL");
       delay(10000);
+      WifiStatus = -1;
   }
   delay(10000);
   lcd.setCursor(3,0);
@@ -65,24 +70,10 @@ void setup()
   lcd.setCursor(0,2);
   lcd.print("IP:");
   lcd.print(wifi.showIP());
-  lcd.setCursor(0,3);
-  lcd.print("Waiting for WIFI...");
-  delay(2000);
-  wifi.confMux(1);
-  delay(100);
-  if(wifi.confServer(1,8080))
-  {
-     lcd.clear();
-     DebugSerial.println("Server is set up");
-     lcd.setCursor(3,0);
-     lcd.print("Hello, world!");
-     lcd.setCursor(1,1);
-     lcd.print("KCloud IntelliPlant");
-     lcd.setCursor(2,2);
-     lcd.print("WIFI CONNECTED!!");
-     delay(3000);
-  }
-  
+  lcd.setCursor(3,3);
+  lcd.print("WIFI CONNECTED!!");
+  delay(5000);
+  WifiStatus = 1;
 }
 
 
@@ -112,7 +103,7 @@ void loop()
           {
             if(SerialIn[i] == ',')
             {
-               j++;
+               j++; //If meets a comma then j+1 and jump to the next setting data.
             }
             else
             {
@@ -120,40 +111,61 @@ void loop()
             }
           }
 
-        SerialIn = String("");
+        SerialIn = String("");  // Clear up all the old SerialIn data.
         /* *******************************************************************************
            The "SerialNumData[0]" lets the server decide which setting should be changed. 
            1 = Normal weather data.
-           2 = Backup & debug data.
+           2 = Schedule data.
           ******************************************************************************** */ 
         switch (int(SerialNumData[0])) {  
         case 1:
-          
-          if((millis() - lastConnectionTime > postingInterval)) {
-             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor1,SerialNumData[1]);
-             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor2,SerialNumData[2]);
-             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor3,SerialNumData[3]);
-             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor4,SerialNumData[4]);
-             sendData(YeelinkDeviceID, YeelinkID1, YeelinkSensor5,SerialNumData[5]);
-             char message[400];
-             if(wifi.ReceiveMessage(message)) 
-             {
-                DebugSerial.println(message);   
-             }
-           }
+          YeeLinkSendSensorData();
           break;
         default: 
           break;
         }
         
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < 10; i++)
         {
    	    SerialNumData[i] = 0;
         }
       }
     }
-
-
-
+    LCDClearWithoutBlink();
+    lcd.setCursor(3,0);
+    lcd.print("Status:");
+    switch (WifiStatus){
+    case -1:
+      lcd.print("NO WIFI");
+      break;
+    case 0:
+      lcd.print("UNKNOWN");
+      break;
+    case 1:
+      lcd.print("CONNECTED");
+      break;
+    case 2:
+      lcd.print("NO INTERNET");
+      break;
+    default:
+      break;
+    }
     
+    lcd.setCursor(0,1);
+    lcd.print("Tmp:");
+    lcd.print(int(SerialNumData[3]));
+    lcd.print(" Humid:");
+    lcd.print(int(SerialNumData[2]));
+    lcd.setCursor(2,2);
+    lcd.print("Dust:");
+    lcd.print(int(SerialNumData[1]));
+    lcd.setCursor(0,3);
+    lcd.print("Last: ");
+    lcd.print(int(SerialNumData[1]));
+    lcd.print(":");
+    lcd.print(int(SerialNumData[2]));
+    lcd.print(" M");
+    lcd.print(int(SerialNumData[3]));
+    
+
 }
