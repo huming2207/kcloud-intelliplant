@@ -12,7 +12,7 @@ It's an Arduino based open source crop auto-managing system.
 
 The project mainly maintained by Jackson Ming Hu in KGTCU, Techonology Clubs Union of Shenzhen Highschool of Science.
 
-It has two parts, one is server side, the other is client side. The server is an Arduino Uno/ProMini and the client is Arduino Mega.
+It has two parts, one is the master side, the other is slave side. The server is an Arduino Uno/ProMini and the client is Arduino Mega.
 
 The server has a temperature & humidity sensor , an air pressure sensor and an air dust sensor and it controls the pump with a relay
 
@@ -22,7 +22,7 @@ The client can get the server's data by wireless UART serial port and then displ
 
 IntelliPlant 是一个深圳科学高中“科高云”项目的子项目,这是一个基于Arduino的开源农作物管理系统，此项目主要由深圳科学高中技术社团联合会（IT社）的 胡铭 负责维护更新。
 
-它包括两个部分，一个是服务端，一个是客户端，服务端用Arduino Uno或ProMini，客户端用Arduino Mega。
+它包括两个部分，一个是主机，一个是从机，主机用Arduino Uno或ProMini，从机用Arduino Mega。
 
 服务端有一个温湿度传感器、一个气压传感器和一个大气粉尘传感器，并且它能依据当天天气情况自动计算植物灌溉水量。
 

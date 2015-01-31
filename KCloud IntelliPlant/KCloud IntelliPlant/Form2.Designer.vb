@@ -22,6 +22,7 @@ Partial Class Form2
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -89,6 +90,8 @@ Partial Class Form2
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -101,6 +104,7 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button11)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 4)
@@ -112,15 +116,16 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(33, 80)
+        Me.Button1.Location = New System.Drawing.Point(25, 82)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 54)
+        Me.Button1.Size = New System.Drawing.Size(53, 37)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "连接"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10", "COM11", "COM12", "COM13", "COM14", "COM15"})
         Me.ComboBox1.Location = New System.Drawing.Point(33, 43)
@@ -378,34 +383,34 @@ Partial Class Form2
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(1050, 217)
+        Me.Button9.Location = New System.Drawing.Point(865, 68)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(70, 30)
+        Me.Button9.Size = New System.Drawing.Size(146, 43)
         Me.Button9.TabIndex = 78
-        Me.Button9.Text = "强制启动"
+        Me.Button9.Text = "强制启动水泵"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(974, 217)
+        Me.Button8.Location = New System.Drawing.Point(713, 68)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(70, 30)
+        Me.Button8.Size = New System.Drawing.Size(146, 43)
         Me.Button8.TabIndex = 77
-        Me.Button8.Text = "强制关闭"
+        Me.Button8.Text = "强制关闭水泵"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(974, 253)
+        Me.Button7.Location = New System.Drawing.Point(974, 150)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(146, 45)
+        Me.Button7.Size = New System.Drawing.Size(146, 140)
         Me.Button7.TabIndex = 76
         Me.Button7.Text = "关于作者"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(974, 172)
+        Me.Button6.Location = New System.Drawing.Point(865, 20)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(146, 38)
         Me.Button6.TabIndex = 75
@@ -414,7 +419,7 @@ Partial Class Form2
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(974, 128)
+        Me.Button5.Location = New System.Drawing.Point(713, 20)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(146, 38)
         Me.Button5.TabIndex = 74
@@ -517,7 +522,7 @@ Partial Class Form2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(511, 58)
+        Me.Label16.Location = New System.Drawing.Point(511, 84)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(53, 12)
         Me.Label16.TabIndex = 39
@@ -526,7 +531,7 @@ Partial Class Form2
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(622, 59)
+        Me.Label17.Location = New System.Drawing.Point(620, 85)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(17, 12)
         Me.Label17.TabIndex = 38
@@ -536,7 +541,7 @@ Partial Class Form2
         '
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-        Me.ComboBox10.Location = New System.Drawing.Point(566, 55)
+        Me.ComboBox10.Location = New System.Drawing.Point(563, 81)
         Me.ComboBox10.Name = "ComboBox10"
         Me.ComboBox10.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox10.TabIndex = 37
@@ -544,7 +549,7 @@ Partial Class Form2
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(868, 22)
+        Me.Label14.Location = New System.Drawing.Point(510, 54)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(53, 12)
         Me.Label14.TabIndex = 36
@@ -553,7 +558,7 @@ Partial Class Form2
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(983, 23)
+        Me.Label15.Location = New System.Drawing.Point(620, 55)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(17, 12)
         Me.Label15.TabIndex = 35
@@ -563,7 +568,7 @@ Partial Class Form2
         '
         Me.ComboBox9.FormattingEnabled = True
         Me.ComboBox9.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-        Me.ComboBox9.Location = New System.Drawing.Point(924, 19)
+        Me.ComboBox9.Location = New System.Drawing.Point(563, 51)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox9.TabIndex = 34
@@ -598,7 +603,7 @@ Partial Class Form2
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(301, 56)
+        Me.CheckBox3.Location = New System.Drawing.Point(301, 82)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(36, 16)
         Me.CheckBox3.TabIndex = 30
@@ -608,7 +613,7 @@ Partial Class Form2
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(483, 58)
+        Me.Label27.Location = New System.Drawing.Point(483, 84)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(17, 12)
         Me.Label27.TabIndex = 29
@@ -618,7 +623,7 @@ Partial Class Form2
         '
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-        Me.ComboBox6.Location = New System.Drawing.Point(424, 55)
+        Me.ComboBox6.Location = New System.Drawing.Point(424, 81)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox6.TabIndex = 28
@@ -626,7 +631,7 @@ Partial Class Form2
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(403, 59)
+        Me.Label28.Location = New System.Drawing.Point(403, 85)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(17, 12)
         Me.Label28.TabIndex = 27
@@ -636,7 +641,7 @@ Partial Class Form2
         '
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-        Me.ComboBox7.Location = New System.Drawing.Point(344, 54)
+        Me.ComboBox7.Location = New System.Drawing.Point(344, 80)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox7.TabIndex = 26
@@ -644,7 +649,7 @@ Partial Class Form2
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(667, 21)
+        Me.CheckBox2.Location = New System.Drawing.Point(301, 53)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(36, 16)
         Me.CheckBox2.TabIndex = 25
@@ -654,7 +659,7 @@ Partial Class Form2
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(842, 23)
+        Me.Label25.Location = New System.Drawing.Point(481, 55)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(17, 12)
         Me.Label25.TabIndex = 24
@@ -664,7 +669,7 @@ Partial Class Form2
         '
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-        Me.ComboBox4.Location = New System.Drawing.Point(779, 19)
+        Me.ComboBox4.Location = New System.Drawing.Point(424, 51)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox4.TabIndex = 23
@@ -672,7 +677,7 @@ Partial Class Form2
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(760, 22)
+        Me.Label26.Location = New System.Drawing.Point(403, 54)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(17, 12)
         Me.Label26.TabIndex = 22
@@ -682,7 +687,7 @@ Partial Class Form2
         '
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-        Me.ComboBox5.Location = New System.Drawing.Point(699, 19)
+        Me.ComboBox5.Location = New System.Drawing.Point(344, 51)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox5.TabIndex = 21
@@ -700,7 +705,7 @@ Partial Class Form2
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(483, 23)
+        Me.Label24.Location = New System.Drawing.Point(481, 24)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(17, 12)
         Me.Label24.TabIndex = 19
@@ -764,6 +769,15 @@ Partial Class Form2
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.Text = "每天定时浇水（手动）"
         Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(86, 82)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(53, 37)
+        Me.Button11.TabIndex = 2
+        Me.Button11.Text = "断开"
+        Me.Button11.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -860,4 +874,6 @@ Partial Class Form2
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents SerialPort1 As System.IO.Ports.SerialPort
+    Friend WithEvents Button11 As System.Windows.Forms.Button
 End Class
