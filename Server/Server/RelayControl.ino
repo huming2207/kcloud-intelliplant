@@ -25,7 +25,11 @@ void RelaySchedule1(){
   EEPROM_read(2, ScheduleMin);
   EEPROM_read(3, ScheduleSec);
   EEPROM_read(4, ScheduleCapacity);
+  EEPROM_read(5, MainSwitch);
   EEPROM_read(6, AutoSwitch);
+  
+  if(MainSwitch == 1)
+  {
   if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
   {
     if (AutoSwitch == 1)
@@ -64,7 +68,11 @@ void RelaySchedule1(){
   {
     digitalWrite(RelayControl,LOW); 
   }
-  
+  }
+  else
+  {
+    digitalWrite(RelayControl,LOW);
+  }
 }
 
 
@@ -76,7 +84,10 @@ void RelaySchedule2(){
   EEPROM_read(8, ScheduleMin);
   EEPROM_read(9, ScheduleSec);
   EEPROM_read(10, ScheduleCapacity);
+  EEPROM_read(11, MainSwitch);
   EEPROM_read(12, AutoSwitch);
+  if(MainSwitch == 1)
+  {
   if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
   {
     if (AutoSwitch == 1)
@@ -115,7 +126,11 @@ void RelaySchedule2(){
   {
     digitalWrite(RelayControl,LOW); 
   }
-  
+  }
+  else
+  {
+    digitalWrite(RelayControl,LOW);
+  }
 }
 
 
@@ -127,7 +142,10 @@ void RelaySchedule3(){
   EEPROM_read(14, ScheduleMin);
   EEPROM_read(15, ScheduleSec);
   EEPROM_read(16, ScheduleCapacity);
+  EEPROM_read(17, MainSwitch);
   EEPROM_read(18, AutoSwitch);
+  if(MainSwitch == 1)
+  {
   if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
   {
     if (AutoSwitch == 1)
@@ -166,7 +184,11 @@ void RelaySchedule3(){
   {
     digitalWrite(RelayControl,LOW); 
   }
-  
+  }
+  else
+  {
+    digitalWrite(RelayControl,LOW); 
+  }
 }
 
 
