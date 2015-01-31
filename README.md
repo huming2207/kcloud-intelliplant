@@ -15,7 +15,7 @@ It's an Arduino based open source crop auto-managing system.
 
 The project mainly maintained by Jackson Ming Hu in KGTCU, Techonology Clubs Union of Shenzhen Highschool of Science.
 
-此项目主要由深圳科学高中技术社团联合会的 胡铭 负责维护更新。
+此项目主要由深圳科学高中技术社团联合会（IT社）的 胡铭 负责维护更新。
 
 It has two parts, one is server side, the other is client side. The server is an Arduino Uno/ProMini and the client is Arduino Mega.
 
