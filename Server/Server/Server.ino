@@ -12,6 +12,7 @@ DS3231 RTClock;
 bool hrs12;
 bool hrsPM12;
 
+/* AVR EEPROM R/W */
 #include <avr/eeprom.h>
 #define EEPROM_write(address, var) eeprom_write_block((const void *)&(var), (void *)(address), sizeof(var))
 #define EEPROM_read(address, var) eeprom_read_block((void *)&(var), (const void *)(address), sizeof(var)) 
@@ -26,29 +27,23 @@ float FinalVoltage;
 float FinalDustDesity;
 String SerialIn;
 float SerialNumData[9] = {0};
+
+/* Relay control pin on D10 */
 int RelayControl = 10;
 
+/* Declare some schedule integers */
 int ScheduleHr;
 int ScheduleMin;
 int ScheduleSec;
 int ScheduleCapacity;
 int ScheduleStatus;
-
 int Sec1;
-int Sec2;
-int Sec3;
 int Min1;
-int Min2;
-int Min3;
 int Hr1;
-int Hr2;
-int Hr3;
-
 int TempRatio;
 int HumidRatio;
 int PressureRatio;
 int DustRatio;
-
 int XWeatherOut;
 int YWeatherOut;
 int AutoSwitch;
@@ -70,7 +65,6 @@ void loop(){
        SerialDataRead();  // Read the serial data first. :-)
        GetDustData();
        SerialWeatherOutput();
-
         
         /* Check if the time meets the schedule */
        RelaySchedule1();

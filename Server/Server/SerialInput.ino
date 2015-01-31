@@ -3,14 +3,14 @@ void SerialDataRead(){
         while (Serial.available() > 0)
         {
             SerialIn += char(Serial.read());
-            delay(2);
+            delay(2); // It does have a delay longer than 2ms, otherwise it will lose some data.
         }
         
        if(SerialIn.length() > 0)  
        {       
           for(unsigned int i = 0; i < SerialIn.length() ; i++)
           {
-            if(SerialIn[i] == ',')
+            if(SerialIn[i] == ',')  // If it meets a comma, then j+1, jumps to the next setting data.
             {
                j++;
             }
@@ -60,9 +60,9 @@ void SerialDataRead(){
           break;
         }
         
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < 10; i++)
         {
-   	    SerialNumData[i] = 0;
+   	    SerialNumData[i] = 0;  // Clear up all the data in SerialNumData
         }
       }
 
