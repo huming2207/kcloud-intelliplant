@@ -7,7 +7,7 @@ void CalculateWeather(){
      1. The pump must work longer than 10 seconds per schedule and less than 60 seconds per schedule.
      2. ... (To be continued. I will ask my mum and grandma some advices, who is expert in agriculture.)
    */
-  XWeatherOut = (FinalDustDesity/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (BMP085.readPressure()/PressureRatio);
+  XWeatherOut = (FinalDustDesity/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
   YWeatherOut = -XWeatherOut + 60;
   if (YWeatherOut > 60){
     YWeatherOut = 60; // Force the output shorter than 60.

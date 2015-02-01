@@ -1,22 +1,43 @@
+#include <AM2321.h>
+#include <Weather.h>
 #include <EEPROM.h>
 #include <DS3231.h>
 #include <Wire.h>
-#include <dht.h>
-#include <Adafruit_BMP085.h>
 
+ /* BMP180/BMP085 barometer statements and settings */
+#define BMP085_ADDRESS 0x77 
+float temperature;
+float pressure;
 
-#define DHT21_PIN 5
-dht DHT;
-Adafruit_BMP085 BMP085;
+const unsigned char OSS = 0; 
+int ac1;
+int ac2;
+int ac3;
+unsigned int ac4;
+unsigned int ac5;
+unsigned int ac6;
+int b1;
+int b2;
+int mb;
+int mc;
+int md;
+long b5; 
+
+/* Dallas (Maxim) DS3231 RTC Clock statements and settings */
 DS3231 RTClock;
 bool hrs12;
 bool hrsPM12;
+bool CenturyDisplay = false;
+
+/* DHT22 (aka. AM232x) statements */
+AM2321 DHT;
 
 /* AVR EEPROM R/W */
 #include <avr/eeprom.h>
 #define EEPROM_write(address, var) eeprom_write_block((const void *)&(var), (void *)(address), sizeof(var))
 #define EEPROM_read(address, var) eeprom_read_block((void *)&(var), (const void *)(address), sizeof(var)) 
 
+/* SHARP GP2Y1010AU0F Air dust sensor statements and settings */
 int AirData = 0; // VOut from SHARP dust sensor
 int AirLED = 3; // LED V-in to SHARP dust sensor
 int PulseTime = 280; // Main pulse time
@@ -55,12 +76,17 @@ void setup(){
       pinMode(AirLED,OUTPUT);
       pinMode(RelayControl,OUTPUT);
       RTClock.setClockMode(false);
+      bmp085Calibration();
 }
 
 
 
 
 void loop(){
+  
+      temperature = bmp085GetTemperature(bmp085ReadUT()); 
+      pressure = bmp085GetPressure(bmp085ReadUP());
+   
        
         /* Simplify the code in main Server.ino */
        SerialDataRead();  // Read the serial data first. :-)

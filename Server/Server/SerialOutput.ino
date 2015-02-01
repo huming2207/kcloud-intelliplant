@@ -6,7 +6,7 @@ void SerialWeatherOutput(){
   Serial.print(",");
   Serial.print(DHT.temperature);
   Serial.print(",");
-  Serial.println(BMP085.readPressure());
+  Serial.println(pressure);
   delay(300);
 }
 
