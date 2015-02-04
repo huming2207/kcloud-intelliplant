@@ -2,6 +2,7 @@
     ' KCloud IntelliPlant , By Jackson Ming Hu , Shenzhen Highschool of Science
     ' Copyleft (C) 2015, Techonology Club of Shenzhen Highschool of Science
     Dim rx As String
+    Dim rx2(10) As Integer
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -51,25 +52,23 @@
         Me.Invoke(New EventHandler(AddressOf Serial_Receiving)) ' 转接线程
     End Sub
     Private Sub Serial_Receiving(ByVal sender As Object, ByVal e As EventArgs)
+        Dim i As Integer
+
         Try
             If SerialPort1.BytesToRead > 0 Then
                 Threading.Thread.Sleep(100) ' 让线程延时一下
-                Dim check As String ' 变量check，用于判读接收的串口数据。
                 Try
                     rx = SerialPort1.ReadLine() ' 赋上串口接收到的数据
                 Catch ex As TimeoutException
                     rx = SerialPort1.ReadExisting()
                 End Try
-
-                check = Mid(rx, 1, 1) ' 取串口输入数据的第一位定义字符
-
-                '*********************************
-                ' 待续！！！！！！
-                ' Jan 31 2015  Jackson Hu
-                '*********************************
-
-
-
+                For j As Integer = 1 To Len(rx)
+                    If rx(j) = "," Then
+                        i = i + 1
+                    Else
+                        rx2(i) = Int(rx(j))
+                    End If
+                Next
                 rx = ""
                 SerialPort1.DiscardInBuffer()
             End If
