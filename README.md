@@ -40,3 +40,40 @@ Development Environment Requirements 开发环境需求
 1. PC客户端部分必须使用高于VS2012和2013版本编译开发，否则会报错而且报的错很奇怪。
 
 2. Arduino SDK 必须使用1.0.x版本，否则IIC LCD不能正常工作。
+
+=========
+About this project 关于本项目
+=========
+
+项目作者：深圳科学高中技术类社团联合会 IT社 
+
+项目主管：胡铭 <huming2207@gmail.com>
+
+项目参与者：胡铭 梁君豪 李一川 
+
+
+Arduino 部分开发：胡铭
+
+计算机软件部分开发与建议：胡铭 梁君豪
+
+硬件与外观设计：李一川
+
+
+本项目为开源项目，所有代码受GPLv2协议保护，严禁商用。
+
+
+Project author: IT Club,
+
+		    Technical Club Union of Shenzhen Highschool of Science
+
+			
+Project administrator: Jackson Ming Hu <huming2207@gmail.com>
+
+Arduino software development: Jackson Ming Hu
+
+PC Client development & advising: Jackson Ming Hu, Junhao Liang
+
+Hardware design: Yichuan Lee
+
+
+This project is a open source project and all the source code are protected by GPLv2 licence.
