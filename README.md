@@ -62,9 +62,7 @@ Arduino 部分开发：胡铭
 本项目为开源项目，所有代码受GPLv2协议保护，严禁商用。
 
 
-Project author: IT Club,
-
-		    Technical Club Union of Shenzhen Highschool of Science
+Project author: IT Club, Technical Club Union of Shenzhen Highschool of Science
 
 			
 Project administrator: Jackson Ming Hu <huming2207@gmail.com>
