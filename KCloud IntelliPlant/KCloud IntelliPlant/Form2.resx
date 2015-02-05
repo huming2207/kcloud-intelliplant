@@ -120,6 +120,31 @@
   <metadata name="SerialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="Label31.Text" xml:space="preserve">
+    <value>项目作者：深圳科学高中技术类社团联合会 IT社 
+
+项目主管：胡铭 &lt;huming2207@gmail.com&gt;
+项目参与者：胡铭 梁君豪 李一川 
+
+Arduino 部分开发：胡铭
+计算机软件部分开发与建议：胡铭 梁君豪
+硬件与外观设计：李一川
+
+本项目为开源项目，所有代码受GPLv2协议保护，严禁商用。
+
+Project author: IT Club, Technical Club Union of Shenzhen Highschool of Science
+
+Project administrator: Jackson Ming Hu &lt;huming2207@gmail.com&gt;
+Arduino software development: Jackson Ming Hu
+PC Client development &amp; advising: Jackson Ming Hu, Junhao Liang
+Hardware design: Yichuan Lee
+
+This project is a open source project and all the source code are protected by GPLv2 licence.
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>34</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
