@@ -111,6 +111,9 @@ Partial Class Form2
         Me.Label31 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -168,6 +171,9 @@ Partial Class Form2
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label34)
+        Me.GroupBox2.Controls.Add(Me.Label33)
+        Me.GroupBox2.Controls.Add(Me.Label32)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label4)
@@ -185,36 +191,36 @@ Partial Class Form2
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("微软雅黑 Light", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label6.Location = New System.Drawing.Point(565, 45)
+        Me.Label6.Location = New System.Drawing.Point(547, 45)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 46)
+        Me.Label6.Size = New System.Drawing.Size(49, 46)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "0 ug/m³"
+        Me.Label6.Text = "0 "
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("微软雅黑 Light", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label5.Location = New System.Drawing.Point(329, 45)
+        Me.Label5.Location = New System.Drawing.Point(320, 45)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(120, 46)
+        Me.Label5.Size = New System.Drawing.Size(49, 46)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "0.00℃"
+        Me.Label5.Text = "0 "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("微软雅黑 Light", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label4.Location = New System.Drawing.Point(81, 45)
+        Me.Label4.Location = New System.Drawing.Point(83, 45)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 46)
+        Me.Label4.Size = New System.Drawing.Size(49, 46)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "0.00%"
+        Me.Label4.Text = "0 "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(502, 29)
+        Me.Label3.Location = New System.Drawing.Point(483, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 12)
         Me.Label3.TabIndex = 2
@@ -388,7 +394,7 @@ Partial Class Form2
         Me.GroupBox5.Controls.Add(Me.RadioButton1)
         Me.GroupBox5.Location = New System.Drawing.Point(11, 281)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1128, 304)
+        Me.GroupBox5.Size = New System.Drawing.Size(1128, 326)
         Me.GroupBox5.TabIndex = 4
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "灌溉设置"
@@ -494,6 +500,7 @@ Partial Class Form2
         '
         'TrackBar3
         '
+        Me.TrackBar3.BackColor = System.Drawing.Color.White
         Me.TrackBar3.Location = New System.Drawing.Point(177, 253)
         Me.TrackBar3.Maximum = 100
         Me.TrackBar3.Name = "TrackBar3"
@@ -504,6 +511,7 @@ Partial Class Form2
         '
         'TrackBar2
         '
+        Me.TrackBar2.BackColor = System.Drawing.Color.White
         Me.TrackBar2.Location = New System.Drawing.Point(177, 205)
         Me.TrackBar2.Maximum = 100
         Me.TrackBar2.Name = "TrackBar2"
@@ -514,6 +522,7 @@ Partial Class Form2
         '
         'TrackBar1
         '
+        Me.TrackBar1.BackColor = System.Drawing.Color.White
         Me.TrackBar1.Location = New System.Drawing.Point(176, 154)
         Me.TrackBar1.Maximum = 100
         Me.TrackBar1.Name = "TrackBar1"
@@ -992,6 +1001,36 @@ Partial Class Form2
         Me.Label30.Text = "IntelliPant, an IoT sub-project of KCloud by Shenzhen Highschool of Science." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "科高智" & _
     "能灌溉系统---一个深圳科学高中科高云项目的物联网子项目。"
         '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label32.Location = New System.Drawing.Point(163, 72)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(29, 27)
+        Me.Label32.TabIndex = 6
+        Me.Label32.Text = "%"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label33.Location = New System.Drawing.Point(407, 72)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(32, 27)
+        Me.Label33.TabIndex = 7
+        Me.Label33.Text = "℃"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label34.Location = New System.Drawing.Point(658, 72)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(69, 27)
+        Me.Label34.TabIndex = 8
+        Me.Label34.Text = "ug/m³"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -1111,4 +1150,7 @@ Partial Class Form2
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents Label32 As System.Windows.Forms.Label
 End Class

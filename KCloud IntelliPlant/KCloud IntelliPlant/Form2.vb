@@ -71,8 +71,11 @@
                 Next
                 rx = ""
                 SerialPort1.DiscardInBuffer()
+                Label4.Text = rx2(3)
+                Label5.Text = rx2(4)
+                Label6.Text = rx2(2)
             End If
-            Label4.Text = rx2(3)
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

@@ -7,7 +7,7 @@ void SerialWeatherOutput(){
   Serial.print(",");
   Serial.print(DHT.temperature / 10);
   Serial.print(",");
-  Serial.println(pressure);
+  Serial.println(long(pressure)); // Here if we use float, it will comes up two more digits and one dot. It will use more serial brandwidth resource and maybe cause the unstability.
   delay(300);
 }
 
