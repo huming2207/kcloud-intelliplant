@@ -1,15 +1,8 @@
 ﻿Public Class Form2
     ' KCloud IntelliPlant , By Jackson Ming Hu , Shenzhen Highschool of Science
     ' Copyleft (C) 2015, Techonology Club of Shenzhen Highschool of Science
-    Dim rx As String
+    Public rx() As String
     Dim rx2(10) As Integer
-
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs)
-        AboutBox1.Show()
-    End Sub
-
-
     Private Sub Button10_Click(sender As Object, e As EventArgs)
         Form3.Show()
     End Sub
@@ -20,7 +13,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            SerialPort1.PortName = ComboBox1.SelectedText
+            SerialPort1.PortName = ComboBox1.SelectedItem
             SerialPort1.BaudRate = 9600 ' 串口波特率
             SerialPort1.DataBits = 8  ' 数据位
             SerialPort1.DtrEnable = False  ' 数据流控制（必须关掉不然会乱码）
@@ -34,7 +27,7 @@
         Catch ex As UnauthorizedAccessException      ' 如果发生无权限打开串口的错误……
             MsgBox("启动串口失败，串口被占用或USB转换器没有插入计算机", MsgBoxStyle.Critical, "错误")
         Catch ex As Exception
-            MsgBox("串口不存在，USB转换器没有插入计算机", MsgBoxStyle.Critical, "错误")
+          MsgBox("串口不存在，USB转换器没有插入计算机", MsgBoxStyle.Critical, "错误")
         End Try
     End Sub
 
@@ -53,14 +46,14 @@
     End Sub
     Private Sub Serial_Receiving(ByVal sender As Object, ByVal e As EventArgs)
         Dim i As Integer
-
+        Dim rx2 As String
         Try
             If SerialPort1.BytesToRead > 0 Then
                 Threading.Thread.Sleep(100) ' 让线程延时一下
                 Try
-                    rx = SerialPort1.ReadLine() ' 赋上串口接收到的数据
+                    rx2 = SerialPort1.ReadLine() ' 赋上串口接收到的数据
                 Catch ex As TimeoutException
-                    rx = SerialPort1.ReadExisting()
+                    rx2 = SerialPort1.ReadExisting()
                 End Try
                 For j As Integer = 1 To Len(rx)
                     If rx(j) = "," Then
@@ -93,6 +86,34 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked = True Then
+            ComboBox8.Enabled = False
+            ComboBox9.Enabled = False
+            ComboBox10.Enabled = False
+            Label12.Enabled = False
+            Label13.Enabled = False
+            Label14.Enabled = False
+            Label15.Enabled = False
+            Label16.Enabled = False
+            Label17.Enabled = False
+        End If
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton2.Checked = False Then
+            ComboBox8.Enabled = True
+            ComboBox9.Enabled = True
+            ComboBox10.Enabled = True
+            Label12.Enabled = True
+            Label13.Enabled = True
+            Label14.Enabled = True
+            Label15.Enabled = True
+            Label16.Enabled = True
+            Label17.Enabled = True
+        End If
     End Sub
 End Class
 

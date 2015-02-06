@@ -29,6 +29,9 @@ Partial Class Form2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -85,7 +88,6 @@ Partial Class Form2
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
@@ -111,9 +113,6 @@ Partial Class Form2
         Me.Label31 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -152,15 +151,17 @@ Partial Class Form2
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.Location = New System.Drawing.Point(25, 82)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(53, 37)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "连接"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ComboBox1
         '
+        Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10", "COM11", "COM12", "COM13", "COM14", "COM15"})
@@ -186,6 +187,36 @@ Partial Class Form2
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "状态"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label34.Location = New System.Drawing.Point(658, 72)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(69, 27)
+        Me.Label34.TabIndex = 8
+        Me.Label34.Text = "ug/m³"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label33.Location = New System.Drawing.Point(407, 72)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(32, 27)
+        Me.Label33.TabIndex = 7
+        Me.Label33.Text = "℃"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label32.Location = New System.Drawing.Point(163, 72)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(29, 27)
+        Me.Label32.TabIndex = 6
+        Me.Label32.Text = "%"
         '
         'Label6
         '
@@ -249,18 +280,18 @@ Partial Class Form2
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Location = New System.Drawing.Point(10, 153)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(170, 125)
+        Me.GroupBox3.Size = New System.Drawing.Size(193, 125)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "校时"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(24, 31)
+        Me.Button2.Location = New System.Drawing.Point(24, 28)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 79)
+        Me.Button2.Size = New System.Drawing.Size(151, 79)
         Me.Button2.TabIndex = 0
-        Me.Button2.Text = "发送时间到目标系统"
+        Me.Button2.Text = "发送系统时间到目标系统"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -273,27 +304,27 @@ Partial Class Form2
         Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.Controls.Add(Me.Label7)
-        Me.GroupBox4.Location = New System.Drawing.Point(188, 153)
+        Me.GroupBox4.Location = New System.Drawing.Point(209, 153)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(951, 125)
+        Me.GroupBox4.Size = New System.Drawing.Size(930, 125)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "网络连接与云平台设置"
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(745, 68)
+        Me.Button4.Location = New System.Drawing.Point(776, 33)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(99, 34)
+        Me.Button4.Size = New System.Drawing.Size(107, 54)
         Me.Button4.TabIndex = 9
         Me.Button4.Text = "读取设置"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(745, 28)
+        Me.Button3.Location = New System.Drawing.Point(662, 33)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(99, 34)
+        Me.Button3.Size = New System.Drawing.Size(111, 55)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "保存设置"
         Me.Button3.UseVisualStyleBackColor = True
@@ -302,7 +333,7 @@ Partial Class Form2
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("微软雅黑 Light", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label11.Location = New System.Drawing.Point(404, 28)
+        Me.Label11.Location = New System.Drawing.Point(409, 28)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(82, 41)
         Me.Label11.TabIndex = 7
@@ -311,7 +342,7 @@ Partial Class Form2
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(352, 28)
+        Me.Label10.Location = New System.Drawing.Point(357, 28)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(41, 12)
         Me.Label10.TabIndex = 6
@@ -319,7 +350,7 @@ Partial Class Form2
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(90, 60)
+        Me.TextBox2.Location = New System.Drawing.Point(95, 60)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(233, 21)
         Me.TextBox2.TabIndex = 3
@@ -327,7 +358,7 @@ Partial Class Form2
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(27, 64)
+        Me.Label8.Location = New System.Drawing.Point(19, 64)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(65, 12)
         Me.Label8.TabIndex = 2
@@ -335,7 +366,7 @@ Partial Class Form2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(90, 28)
+        Me.TextBox1.Location = New System.Drawing.Point(95, 28)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(233, 21)
         Me.TextBox1.TabIndex = 1
@@ -343,7 +374,7 @@ Partial Class Form2
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(27, 33)
+        Me.Label7.Location = New System.Drawing.Point(19, 33)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(65, 12)
         Me.Label7.TabIndex = 0
@@ -389,7 +420,6 @@ Partial Class Form2
         Me.GroupBox5.Controls.Add(Me.ComboBox3)
         Me.GroupBox5.Controls.Add(Me.Label23)
         Me.GroupBox5.Controls.Add(Me.ComboBox2)
-        Me.GroupBox5.Controls.Add(Me.RadioButton3)
         Me.GroupBox5.Controls.Add(Me.RadioButton2)
         Me.GroupBox5.Controls.Add(Me.RadioButton1)
         Me.GroupBox5.Location = New System.Drawing.Point(11, 281)
@@ -534,7 +564,7 @@ Partial Class Form2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(511, 84)
+        Me.Label16.Location = New System.Drawing.Point(510, 84)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(53, 12)
         Me.Label16.TabIndex = 39
@@ -749,16 +779,6 @@ Partial Class Form2
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(53, 20)
         Me.ComboBox2.TabIndex = 16
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(31, 81)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(47, 16)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.Text = "关闭"
-        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -1001,36 +1021,6 @@ Partial Class Form2
         Me.Label30.Text = "IntelliPant, an IoT sub-project of KCloud by Shenzhen Highschool of Science." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "科高智" & _
     "能灌溉系统---一个深圳科学高中科高云项目的物联网子项目。"
         '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label32.Location = New System.Drawing.Point(163, 72)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(29, 27)
-        Me.Label32.TabIndex = 6
-        Me.Label32.Text = "%"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label33.Location = New System.Drawing.Point(407, 72)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(32, 27)
-        Me.Label33.TabIndex = 7
-        Me.Label33.Text = "℃"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("微软雅黑 Light", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label34.Location = New System.Drawing.Point(658, 72)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(69, 27)
-        Me.Label34.TabIndex = 8
-        Me.Label34.Text = "ug/m³"
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -1085,7 +1075,6 @@ Partial Class Form2
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Label13 As System.Windows.Forms.Label

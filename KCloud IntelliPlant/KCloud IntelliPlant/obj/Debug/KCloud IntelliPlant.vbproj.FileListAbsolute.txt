@@ -28,7 +28,6 @@ D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.pdb
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.xml
-D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.AboutBox1.resources
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form1.resources
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form2.resources
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud_IntelliPlant.Form3.resources
