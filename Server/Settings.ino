@@ -10,7 +10,7 @@
 
 void set_time(){
    Wire.begin();
-   RTClock.setClockMode(true); // Set the RTC to "24-hour-per-day" format.
+   RTClock.setClockMode(false); // Set the RTC to "24-hour-per-day" format.
    RTClock.setSecond(SerialNumData[7]); 
    RTClock.setMinute(SerialNumData[6]); 
    RTClock.setHour(SerialNumData[5]);   

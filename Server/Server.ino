@@ -113,4 +113,7 @@ void loop(){
        RelaySchedule2();
        RelaySchedule3();
        
+       SolarVoltageCalculate();
+       SolarCurrentCalculate();
+       
 }
