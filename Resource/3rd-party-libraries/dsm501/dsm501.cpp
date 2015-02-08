@@ -136,8 +136,6 @@ unsigned long  calculateConcentration(unsigned long value)
 
 void dsm501::getParticles(unsigned long  &originValue, unsigned long  &filteredValue)
 {
-    unsigned long  concentration=0;
-    float ratioPWM=0.0 ;
     unsigned long lowPulseOccupancy=0;
     unsigned long startTime=0;
     unsigned long duration=0;

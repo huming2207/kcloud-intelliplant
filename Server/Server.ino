@@ -40,12 +40,13 @@ bool hrs12;
 bool hrsPM12;
 bool CenturyDisplay = false;
 
-/* DHT22 (aka. AM232x) statements */
+/* DHT33 (aka. AM232x) statements */
 AM2321 DHT;
 
 /* Korean DSM501A Dust sensor statements */
 unsigned long OriginDustDesity, FinalDustDesity;
 dsm501 DSM501A;
+int DustInput = 8;
 
 /* AVR EEPROM R/W */
 #include <avr/eeprom.h>
@@ -78,12 +79,19 @@ int YWeatherOut;
 int AutoSwitch;
 int MainSwitch = 0;
 
+/* SolarMonitor statements */
+int SolarVoltageAnalog = 0; // The solar voltage analog data from Analog Pin 0 (A0)
+int SolarCurrentAnalog = 1; // The solar current analog data from Analog Pin 1 (A1)
+float SolarVoltage;
+float SolarCurrent;
+
+
 void setup(){
       Serial.begin(9600);
       pinMode(RelayControl,OUTPUT);
       RTClock.setClockMode(false);
       bmp085Calibration();
-      DSM501A.setDatapin(8); // Set the DSM501 DATA pin to 8 (D8)
+      DSM501A.setDatapin(DustInput); // Set the DSM501 DATA pin to 8 (D8)
       DSM501A.enableFilter();
 }
 
