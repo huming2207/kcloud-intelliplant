@@ -1,3 +1,13 @@
+/* 
+    SHSS KCloud IntelliPlant Server (master) source code
+    Author: Jackson Ming Hu <huming2207@gmail.com>
+            Technical Club Union of Shenzhen Highschool of Science
+    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+    
+    SerialInput.ino --->> Read the UART serial input settings' data.
+                       
+*/
+
 void SerialDataRead(){
         int j = 0;
         while (Serial.available() > 0)

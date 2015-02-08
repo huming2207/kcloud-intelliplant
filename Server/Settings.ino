@@ -1,3 +1,13 @@
+/* 
+    SHSS KCloud IntelliPlant Server (master) source code
+    Author: Jackson Ming Hu <huming2207@gmail.com>
+            Technical Club Union of Shenzhen Highschool of Science
+    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+    
+    Settings.ino --->> Write settings to EEPROM or IIC devices
+                       
+*/
+
 void set_time(){
    Wire.begin();
    RTClock.setClockMode(true); // Set the RTC to "24-hour-per-day" format.

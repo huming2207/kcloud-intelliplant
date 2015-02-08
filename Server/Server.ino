@@ -1,3 +1,12 @@
+/* 
+    SHSS KCloud IntelliPlant Server (master) source code
+    Author: Jackson Ming Hu <huming2207@gmail.com>
+            Technical Club Union of Shenzhen Highschool of Science
+    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+    
+    Server.ino -->> This is the main arduino project file, including some statements and header files.
+*/
+
 #include <dsm501.h>
 #include <AM2321.h>
 #include <Weather.h>

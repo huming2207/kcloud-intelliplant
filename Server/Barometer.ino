@@ -1,3 +1,16 @@
+/* 
+    SHSS KCloud IntelliPlant Server (master) source code
+    Author: Jackson Ming Hu <huming2207@gmail.com>
+            Technical Club Union of Shenzhen Highschool of Science
+            ...and some unknown guys including the TAOBAO retailers, thanks them!!
+    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+    
+    Barometer.ino -->> A tiny BOSCH BMP085/180 barometer library
+                       Ported from Mosquito Multi Ground station project
+                       Originally from the retailer's AVR & STM32 example source code.
+                       Compared with other BMP085/180 barometer libraries, this library uses less RAM and has a better performance.
+                       
+*/
 void bmp085Calibration()
 {
   ac1 = bmp085ReadInt(0xAA);
