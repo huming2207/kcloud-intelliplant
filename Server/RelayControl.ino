@@ -17,8 +17,8 @@ void CalculateWeather(){
      1. The pump must work longer than 10 seconds per schedule and less than 60 seconds per schedule.
      2. ... (To be continued. I will ask my mum and grandma some advices, who is expert in agriculture.)
    */
-   DHT.read();
-  XWeatherOut = (FinalDustDesity/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
+  DHT.read();
+  XWeatherOut = (ratio/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
   YWeatherOut = -XWeatherOut + 60;
   if (YWeatherOut > 60){
     YWeatherOut = 60; // Force the output shorter than 60.
@@ -41,11 +41,11 @@ void RelaySchedule1(){
   
   if(MainSwitch == 1)
   {
-  if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
+  if(ScheduleHr == hour(t) && ScheduleMin == minute(t))
   {
     if (AutoSwitch == 1)
     {
-      Sec1 = RTClock.getSecond() + YWeatherOut;
+      Sec1 = second(t) + YWeatherOut;
       if (Sec1 > 59)
       {
         Min1++;
@@ -63,7 +63,7 @@ void RelaySchedule1(){
       digitalWrite(RelayControl,HIGH); 
       ScheduleNum = 1;
       SerialScheduleOutput();
-      if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
+      if (Sec1 == second(t)) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
       }
@@ -73,7 +73,7 @@ void RelaySchedule1(){
       digitalWrite(RelayControl,HIGH);
       ScheduleNum = 1;
       SerialScheduleOutput();
-      if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
+      if (second(t) == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);
       }
@@ -103,11 +103,11 @@ void RelaySchedule2(){
   EEPROM_read(12, AutoSwitch);
   if(MainSwitch == 1)
   {
-  if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
+  if(ScheduleHr == hour(t) && ScheduleMin == minute(t))
   {
     if (AutoSwitch == 1)
     {
-      Sec1 = RTClock.getSecond() + YWeatherOut;
+      Sec1 = second(t) + YWeatherOut;
       if (Sec1 > 59)
       {
         Min1++;
@@ -125,7 +125,7 @@ void RelaySchedule2(){
       digitalWrite(RelayControl,HIGH); 
       ScheduleNum = 2;
       SerialScheduleOutput();
-      if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
+      if (Sec1 == second(t)) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
       }
@@ -135,7 +135,7 @@ void RelaySchedule2(){
       digitalWrite(RelayControl,HIGH);
       ScheduleNum = 2;
       SerialScheduleOutput();
-      if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
+      if (second(t) == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);
       }
@@ -165,11 +165,11 @@ void RelaySchedule3(){
   EEPROM_read(18, AutoSwitch);
   if(MainSwitch == 1)
   {
-  if(ScheduleHr == RTClock.getHour(hrs12,hrsPM12) && ScheduleMin == RTClock.getMinute())
+  if(ScheduleHr == hour(t) && ScheduleMin == minute(t))
   {
     if (AutoSwitch == 1)
     {
-      Sec1 = RTClock.getSecond() + YWeatherOut;
+      Sec1 = second(t) + YWeatherOut;
       if (Sec1 > 59)
       {
         Min1++;
@@ -187,7 +187,7 @@ void RelaySchedule3(){
       digitalWrite(RelayControl,HIGH); 
       ScheduleNum = 3;
       SerialScheduleOutput();
-      if (Sec1 == RTClock.getSecond()) // When it meets the time, then turn the pump off.
+      if (Sec1 == second(t)) // When it meets the time, then turn the pump off.
       {
         digitalWrite(RelayControl,LOW);
       }
@@ -197,7 +197,7 @@ void RelaySchedule3(){
       digitalWrite(RelayControl,HIGH);
       ScheduleNum = 3;
       SerialScheduleOutput();
-      if (RTClock.getSecond() == (ScheduleCapacity + ScheduleSec))
+      if (second(t) == (ScheduleCapacity + ScheduleSec))
       {
         digitalWrite(RelayControl,LOW);
       }

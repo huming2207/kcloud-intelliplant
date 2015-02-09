@@ -9,28 +9,20 @@
 */
 
 void set_time(){
-   Wire.begin();
-   RTClock.setClockMode(false); // Set the RTC to "24-hour-per-day" format.
-   RTClock.setSecond(SerialNumData[7]); 
-   RTClock.setMinute(SerialNumData[6]); 
-   RTClock.setHour(SerialNumData[5]);   
-   RTClock.setDoW(SerialNumData[4]);    
-   RTClock.setDate(SerialNumData[3]);   
-   RTClock.setMonth(SerialNumData[2]);  
-   RTClock.setYear(SerialNumData[1]); 
+   setTime(SerialNumData[5],SerialNumData[6],SerialNumData[7],SerialNumData[3],SerialNumData[2],SerialNumData[1]);  //Hr, Min, Sec, Date, Month, Year.
    Serial.println("**DEBUG: RTC CMD SUCCESS**");
    Serial.print("**NOW NEW RTC TIME IS:");
-   Serial.print(RTClock.getYear());
+   Serial.print(year());
    Serial.print("/");
-   Serial.print(RTClock.getMonth(CenturyDisplay));
+   Serial.print(month());
    Serial.print("/");
-   Serial.println(RTClock.getDate());
+   Serial.println(day());
    Serial.print("**");
-   Serial.print(RTClock.getHour(hrs12,hrsPM12));
+   Serial.print(hour());
    Serial.print(":");
-   Serial.print(RTClock.getMinute());
+   Serial.print(minute());
    Serial.print(":");
-   Serial.println(RTClock.getSecond());
+   Serial.println(second());
    Serial.println("**DEBUG DATA ENDED***");
 }
 

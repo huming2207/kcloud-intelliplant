@@ -7,13 +7,11 @@
     Server.ino -->> This is the main arduino project file, including some statements and header files.
 */
 
-#include <dsm501.h>
 #include <AM2321.h>
 #include <Weather.h>
 #include <EEPROM.h>
-#include <DS3231.h>
 #include <Wire.h>
-
+#include <Time.h>
 
  /* BMP180/BMP085 barometer statements and settings */
 #define BMP085_ADDRESS 0x77 
@@ -35,18 +33,21 @@ int md;
 long b5; 
 
 /* Dallas (Maxim) DS3231 RTC Clock statements and settings */
-DS3231 RTClock;
-bool hrs12;
-bool hrsPM12;
-bool CenturyDisplay = false;
+tmElements_t tm;
+time_t t;
 
 /* DHT33 (aka. AM232x) statements */
 AM2321 DHT;
 
 /* Korean DSM501A Dust sensor statements */
-unsigned long OriginDustDesity, FinalDustDesity;
-dsm501 DSM501A;
-int DustInput = 8;
+int pin = 8;
+unsigned long duration;
+unsigned long starttime;
+unsigned long sampletime_ms = 30000;
+unsigned long lowpulseoccupancy = 0;
+float ratio = 0;
+float concentration = 0;
+
 
 /* AVR EEPROM R/W */
 #include <avr/eeprom.h>
@@ -87,22 +88,28 @@ float SolarCurrent;
 
 
 void setup(){
+      pinMode(8,INPUT);
       Serial.begin(9600);
       pinMode(RelayControl,OUTPUT);
-      RTClock.setClockMode(false);
       bmp085Calibration();
-      DSM501A.setDatapin(DustInput); // Set the DSM501 DATA pin to 8 (D8)
-      DSM501A.enableFilter();
+      starttime = millis();
 }
 
 
 
 
 void loop(){
-  
-      temperature = bmp085GetTemperature(bmp085ReadUT()); 
+      duration = pulseIn(pin, LOW);
+      lowpulseoccupancy = lowpulseoccupancy+duration;
+    
+      if ((millis()-starttime) > sampletime_ms)
+      {
+        ratio = lowpulseoccupancy/(sampletime_ms*10.0);  // Integer percentage 0=>100
+        concentration = 1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+50.62; // using spec sheet curve
+        lowpulseoccupancy = 0;
+        starttime = millis();
+      } 
       pressure = bmp085GetPressure(bmp085ReadUP());
-      DSM501A.getParticles(OriginDustDesity,FinalDustDesity);
        
         /* Simplify the code in main Server.ino */
        SerialDataRead();  // Read the serial data first. :-)
@@ -115,5 +122,6 @@ void loop(){
        
        SolarVoltageCalculate();
        SolarCurrentCalculate();
+
        
 }

@@ -66,6 +66,9 @@ void SerialDataRead(){
           {
               digitalWrite(RelayControl,LOW); 
           }
+        case 6:
+          SerialTimeDebug();
+          break;
         default: 
           break;
         }
