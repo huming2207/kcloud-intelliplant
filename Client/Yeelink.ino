@@ -1,6 +1,6 @@
 void sendData(String device_id, String api_id, String sensor_id,float sensor_data) {
   // if there's a successful connection:
-  if (wifi.ipConfig(TCP,server, 80)) {
+  if (wifi.ipConfig(TCP,YeelinkServer, 80)) {
     DebugSerial.println("Connecting to Yeelink...");
     // send the HTTP PUT request:
     String cmd;

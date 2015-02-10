@@ -29,22 +29,23 @@ int WifiStatus = 0;
 
 LiquidCrystal_I2C lcd(0x27,20,4);  
 WIFI wifi;
-char server[] = "api.yeelink.net";
+char YeelinkServer[] = "api.yeelink.net";
+
 
 void setup()
 {
   lcd.init();                      // Initialize the lcd 
   lcd.init();
   lcd.backlight();
-  EEPROM_read(0,WifiSSID);   // Read the Wifi SSID
-  EEPROM_read(5,WifiPassword); // Read the Wifi Password
-  EEPROM_read(50,YeelinkID1);
-  EEPROM_read(60,YeelinkSensor1);
-  EEPROM_read(62,YeelinkSensor2);
-  EEPROM_read(64,YeelinkSensor3);
-  EEPROM_read(66,YeelinkSensor4);
-  EEPROM_read(68,YeelinkSensor5);
-  EEPROM_read(70,YeelinkDeviceID);
+  EEPROM_read(1000,WifiSSID);   // Read the Wifi SSID
+  EEPROM_read(1500,WifiPassword); // Read the Wifi Password
+  EEPROM_read(2000,YeelinkID1);
+  EEPROM_read(300,YeelinkSensor1);
+  EEPROM_read(400,YeelinkSensor2);
+  EEPROM_read(500,YeelinkSensor3);
+  EEPROM_read(600,YeelinkSensor4);
+  EEPROM_read(700,YeelinkSensor5);
+  EEPROM_read(800,YeelinkDeviceID);
   DebugSerial.println("SHSS KGTCU IntelliPlant Client");
   DebugSerial.println("Now initalized.");
   wifi.begin();
@@ -87,7 +88,7 @@ void loop()
     }
     if (SerialIn.length() > 0)
     {
-      if(SerialIn[0] == 'Y' || SerialIn[0] == 'F' || SerialIn[0] == 'A' || SerialIn[0] == 'B' || SerialIn[0] == 'C' || SerialIn[0] == 'D' || SerialIn[0] == 'E')
+      if(SerialIn[0] == 'Y' || SerialIn[0] == 'F' || SerialIn[0] == 'A' || SerialIn[0] == 'B' || SerialIn[0] == 'C' || SerialIn[0] == 'D' || SerialIn[0] == 'E' || SerialIn[0] == 'W' ||  SerialIn[0] == 'R')
       {
        YeelinkDeviceIDSave();
        YeelinkIDSave();
@@ -96,6 +97,8 @@ void loop()
        YeelinkSensorSave3();
        YeelinkSensorSave4();
        YeelinkSensorSave5();
+       WifiPasswordSave();
+       WifiSSIDSave();
       }
       else
       {
