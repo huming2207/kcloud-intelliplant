@@ -9,20 +9,24 @@
 */
 
 void set_time(){
-   setTime(SerialNumData[5],SerialNumData[6],SerialNumData[7],SerialNumData[3],SerialNumData[2],SerialNumData[1]);  //Hr, Min, Sec, Date, Month, Year.
+   RTC.init();
+        /* 参数格式: 年, 月, 日, 时, 分, 秒, 星期 */
+   Time t(SerialNumData[1],SerialNumData[2],SerialNumData[3],SerialNumData[4],SerialNumData[5],SerialNumData[6],SerialNumData[7]);
+   RTC.setTime(t);
+   t = RTC.getTime();
    Serial.println("**DEBUG: RTC CMD SUCCESS**");
    Serial.print("**NOW NEW RTC TIME IS:");
-   Serial.print(year());
+   Serial.print(t.year());
    Serial.print("/");
-   Serial.print(month());
+   Serial.print(t.month());
    Serial.print("/");
-   Serial.println(day());
+   Serial.println(t.date());
    Serial.print("**");
-   Serial.print(hour());
+   Serial.print(t.hour());
    Serial.print(":");
-   Serial.print(minute());
+   Serial.print(t.minute());
    Serial.print(":");
-   Serial.println(second());
+   Serial.println(t.second());
    Serial.println("**DEBUG DATA ENDED***");
 }
 

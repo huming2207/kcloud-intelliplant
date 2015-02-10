@@ -11,7 +11,7 @@
 #include <Weather.h>
 #include <EEPROM.h>
 #include <Wire.h>
-#include <Time.h>
+#include <DS3231RTC.h>
 
  /* BMP180/BMP085 barometer statements and settings */
 #define BMP085_ADDRESS 0x77 
@@ -33,8 +33,8 @@ int md;
 long b5; 
 
 /* Dallas (Maxim) DS3231 RTC Clock statements and settings */
-tmElements_t tm;
-time_t t;
+DS3231RTC RTC;
+Time t;
 
 /* DHT33 (aka. AM232x) statements */
 AM2321 DHT;
@@ -93,6 +93,7 @@ void setup(){
       pinMode(RelayControl,OUTPUT);
       bmp085Calibration();
       starttime = millis();
+      t = RTC.getTime();
 }
 
 

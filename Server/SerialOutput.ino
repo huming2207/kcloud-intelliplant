@@ -31,18 +31,19 @@ void SerialScheduleOutput(){
 }
 
 void SerialTimeDebug(){
+  t = RTC.getTime();
   Serial.println("***DEBUG: TIMEMSG******");
   Serial.print("***");
-  Serial.print(month());
+  Serial.print(t.month());
   Serial.print("/");
-  Serial.print(day());
+  Serial.print(t.day());
   Serial.print("/");
-  Serial.println(year());
+  Serial.println(t.year());
   Serial.print("***");
-  Serial.print(hour());
+  Serial.print(t.hour());
   Serial.print(":");
-  Serial.print(minute());
+  Serial.print(t.minute());
   Serial.print(":");
-  Serial.println(second());
+  Serial.println(t.second());
   
 }
