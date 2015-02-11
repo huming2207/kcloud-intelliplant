@@ -13,7 +13,7 @@ void set_time(){
    Time t(SerialNumData[1],SerialNumData[2],SerialNumData[3],SerialNumData[4],SerialNumData[5],SerialNumData[6],SerialNumData[7]);  //Yr,Mon,Day,Hr,Min,Sec,DayOfWeek
    RTC.setTime(t);
    t = RTC.getTime();
-   Serial.println("**DEBUG: RTC CMD SUCCESS**");
+   Serial.println("**DEBUG: RTC SET CMD SUCCESS**");
    Serial.print("**NOW NEW RTC TIME IS:");
    Serial.print(t.year());
    Serial.print("/");
@@ -30,36 +30,36 @@ void set_time(){
 }
 
 void set_relay_1(){
-  EEPROM_write(1, SerialNumData[1]); // Hr
-  EEPROM_write(5, SerialNumData[2]); // Min
-  EEPROM_write(10, SerialNumData[3]); // Sec
-  EEPROM_write(15, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(20, SerialNumData[5]); // ON/OFF
-  EEPROM_write(25, SerialNumData[6]); // Auto ON/OFF
+  EEPROM.write(1, byte(SerialNumData[1])); // Hr
+  EEPROM.write(2, byte(SerialNumData[2])); // Min
+  EEPROM.write(3, byte(SerialNumData[3])); // Sec
+  EEPROM.write(4, byte(SerialNumData[4])); // Capacity lasts 
+  EEPROM.write(5, byte(SerialNumData[5])); // ON/OFF
+  EEPROM.write(6, byte(SerialNumData[6])); // Auto ON/OFF
 }
 
 void set_relay_2(){
-  EEPROM_write(30, SerialNumData[1]); // Hr
-  EEPROM_write(35, SerialNumData[2]); // Min
-  EEPROM_write(40, SerialNumData[3]); // Sec
-  EEPROM_write(45, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(50, SerialNumData[5]); // ON/OFF
-  EEPROM_write(55, SerialNumData[6]); // Auto ON/OFF
+  EEPROM.write(7, byte(SerialNumData[1])); // Hr
+  EEPROM.write(8, byte(SerialNumData[2])); // Min
+  EEPROM.write(9, byte(SerialNumData[3])); // Sec
+  EEPROM.write(10, byte(SerialNumData[4])); // Capacity lasts 
+  EEPROM.write(11, byte(SerialNumData[5])); // ON/OFF
+  EEPROM.write(12, byte(SerialNumData[6])); // Auto ON/OFF
 }
 
 void set_relay_3(){
-  EEPROM_write(60, SerialNumData[1]); // Hr
-  EEPROM_write(65, SerialNumData[2]); // Min
-  EEPROM_write(70, SerialNumData[3]); // Sec
-  EEPROM_write(75, SerialNumData[4]); // Capacity lasts 
-  EEPROM_write(80, SerialNumData[5]); // ON/OFF
-  EEPROM_write(85, SerialNumData[6]); // Auto ON/OFF
+  EEPROM.write(13, byte(SerialNumData[1])); // Hr
+  EEPROM.write(14, byte(SerialNumData[2])); // Min
+  EEPROM.write(15, byte(SerialNumData[3])); // Sec
+  EEPROM.write(16, byte(SerialNumData[4])); // Capacity lasts 
+  EEPROM.write(17, byte(SerialNumData[5])); // ON/OFF
+  EEPROM.write(18, byte(SerialNumData[6])); // Auto ON/OFF
 }
 
 void set_weather_ratio(){
-  EEPROM_write(90, SerialNumData[1]); // Temperature ratio
-  EEPROM_write(120, SerialNumData[2]); // Humidity ratio
-  EEPROM_write(170, SerialNumData[3]); // Air dust ratio
-  EEPROM_write(220, SerialNumData[4]); // Air pressure ratio
+  EEPROM.write(20, byte(SerialNumData[1])); // Temperature ratio
+  EEPROM.write(21, byte(SerialNumData[2])); // Humidity ratio
+  EEPROM.write(22, byte(SerialNumData[3])); // Solar ratio
+  EEPROM.write(23, byte(SerialNumData[4])); // Air pressure ratio
 }
 

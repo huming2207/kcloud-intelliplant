@@ -38,9 +38,9 @@ void SerialDataRead(){
            2 = Set schedule time #1 
            3 = Set schedule time #2
            4 = Set schedule time #3
-           5 = Set schedule time #4
-           6 = Set schedule time #5
-           7 = Set schedule time #6
+           5 = Force relay ON/OFF
+           6 = Debug message
+           7 = Set weather2water ratio
            8 = Debug mode ON/OFF
            9 = Force relay ON/OFF
           ******************************************************************************** */ 
@@ -55,7 +55,7 @@ void SerialDataRead(){
           set_relay_2();
           break;
         case 4:
-          set_weather_ratio();
+          set_relay_3();
           break;
         case 5:
           if (SerialNumData[1] > 0)
@@ -66,8 +66,13 @@ void SerialDataRead(){
           {
               digitalWrite(RelayControl,LOW); 
           }
+          break;
         case 6:
           SerialTimeDebug();
+          EEPROMDebug();
+          break;
+        case 7:
+          set_weather_ratio();
           break;
         default: 
           break;

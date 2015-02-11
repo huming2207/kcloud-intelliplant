@@ -58,17 +58,12 @@ float ratio = 0;
 float concentration = 0;
 
 
-/* AVR EEPROM R/W */
-#include <avr/eeprom.h>
-#define EEPROM_write(address, var) eeprom_write_block((const void *)&(var), (void *)(address), sizeof(var))
-#define EEPROM_read(address, var) eeprom_read_block((void *)&(var), (const void *)(address), sizeof(var)) 
-
-
+/* Serial input statements */
 String SerialIn;
 float SerialNumData[9] = {0};
 
-/* Relay control pin on D10 */
-int RelayControl = 10;
+/* Relay control pin on D7 */
+int RelayControl = 13; // Temporarily change it to D13 for debugging
 
 /* Declare some schedule integers */
 int ScheduleHr;
@@ -83,7 +78,7 @@ int Hr1;
 int TempRatio;
 int HumidRatio;
 int PressureRatio;
-int DustRatio;
+int SolarRatio;
 int XWeatherOut;
 int YWeatherOut;
 int AutoSwitch;
@@ -112,7 +107,8 @@ void loop(){
   
       /* 
           DM501A Sensor code
-          Author: Unknown (From taobao's retailer)
+          Author: Unknown (From taobao's retailer) 
+          See also: http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf
       */
       duration = pulseIn(pin, LOW);
       lowpulseoccupancy = lowpulseoccupancy+duration;
