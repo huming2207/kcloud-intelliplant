@@ -23,7 +23,7 @@ void CalculateWeather(){
   EEPROM_read(170, DustRatio); // Air dust ratio
   EEPROM_read(220, PressureRatio); // Air pressure ratio
   
-  XWeatherOut = (ratio/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
+  XWeatherOut = (concentration/DustRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
   YWeatherOut = -XWeatherOut + 60;
   if (YWeatherOut > 60){
     YWeatherOut = 60; // Force the output shorter than 60.

@@ -5,6 +5,15 @@
     ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
     
     Server.ino -->> This is the main arduino project file, including some statements and header files.
+    
+    This project contains some 3rd party libraries, including:
+    AM232x library
+    Author: Wang Dong       From: https://github.com/wangdong/AM2321
+    
+    DS3231 RTC library
+    Author: pamisisi        From: https://github.com/pamisisi/arduino-DS3231RTC
+    
+    ...and some other libraries from TAOBAO.COM's retailer which the authors are unknown. I don't know who they are but thanks for their hard work.
 */
 
 #include <AM2321.h>
@@ -100,13 +109,19 @@ void setup(){
 
 
 void loop(){
+  
+      /* 
+          DM501A Sensor code
+          Author: Unknown (From taobao's retailer)
+      */
       duration = pulseIn(pin, LOW);
       lowpulseoccupancy = lowpulseoccupancy+duration;
     
       if ((millis()-starttime) > sampletime_ms)
       {
         ratio = lowpulseoccupancy/(sampletime_ms*10.0);  // Integer percentage 0=>100
-        concentration = 1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+50.62; // using spec sheet curve
+        //concentration = (1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+0.62)/2.5;  // This is the code to convert the ratio to concentration which is the captialist standard (pcs/ft^3)
+        concentration = (ratio * 8.57) / 2.5;    // This is the damn communist standard which is ug/m^3 :-) 
         lowpulseoccupancy = 0;
         starttime = millis();
       } 

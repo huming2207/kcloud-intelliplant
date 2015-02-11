@@ -11,7 +11,7 @@
 void SerialWeatherOutput(){
   DHT.read();
   Serial.print("1,");
-  Serial.print(ratio); 
+  Serial.print(concentration); 
   Serial.print(",");
   Serial.print(DHT.humidity / 10);
   Serial.print(",");
