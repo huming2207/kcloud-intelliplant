@@ -51,7 +51,7 @@ void RelaySchedule1(){
   AutoSwitch = int(EEPROM.read(6));
   
   
-  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute())
+  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute() && ScheduleSec == t.second())
   {
     digitalWrite(RelayControl, HIGH);
     if (AutoSwitch == 1)
@@ -63,7 +63,7 @@ void RelaySchedule1(){
     else
     {
         SerialScheduleOutput();
-        delay(ScheduleSec * 1000);
+        delay(ScheduleCapacity * 1000);
         digitalWrite(RelayControl,LOW);
     }
   }
@@ -80,7 +80,7 @@ void RelaySchedule2(){
   AutoSwitch = int(EEPROM.read(12));
   
   
-  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute())
+  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute() && ScheduleSec == t.second())
   {
     digitalWrite(RelayControl, HIGH);
     if (AutoSwitch == 1)
@@ -92,7 +92,7 @@ void RelaySchedule2(){
     else
     {
         SerialScheduleOutput();
-        delay(ScheduleSec * 1000);
+        delay(ScheduleCapacity * 1000);
         digitalWrite(RelayControl,LOW);
     }
   }
@@ -108,19 +108,19 @@ void RelaySchedule3(){
   AutoSwitch = int(EEPROM.read(18));
   
   
-  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute())
+  if (MainSwitch == 1 && ScheduleHr == t.hour() && ScheduleMin == t.minute() && ScheduleSec == t.second())
   {
     digitalWrite(RelayControl, HIGH);
     if (AutoSwitch == 1)
     {
         SerialScheduleOutput();
-        delay(YWeatherOut * 1000);  
+        delay(YWeatherOut * 1000);
         digitalWrite(RelayControl,LOW);
     }
     else
     {
         SerialScheduleOutput();
-        delay(ScheduleSec * 1000);
+        delay(ScheduleCapacity * 1000);
         digitalWrite(RelayControl,LOW);
     }
   }
