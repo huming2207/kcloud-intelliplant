@@ -36,3 +36,7 @@ D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.exe
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbprojResolveAssemblyReference.cache
 D:\软件工程\kcloud-intelliplant\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.ResolveComReference.cache
+D:\软件工程\kcloud-intelliplant\Obsolete\KCloud IntelliPlant\KCloud IntelliPlant\bin\Debug\KCloud IntelliPlant.exe.config
+D:\软件工程\kcloud-intelliplant\Obsolete\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.vbproj.ResolveComReference.cache
+D:\软件工程\kcloud-intelliplant\Obsolete\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.xml
+D:\软件工程\kcloud-intelliplant\Obsolete\KCloud IntelliPlant\KCloud IntelliPlant\obj\Debug\KCloud IntelliPlant.pdb
