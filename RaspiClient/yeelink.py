@@ -11,7 +11,14 @@
 import os
 import requests
 import json,time,string
-import serial
+import serial,ConfigParser
+
+config = ConfigParser.RawConfigParser()
+#if os.path.exists("settings.conf")
+#    print "Configuration file does not exist. Exit..."
+#    exit()
+config.read("Settings.conf")
+
 
 def readlineCR(port):
     rv = ""
@@ -36,29 +43,31 @@ def getcputemperature():
 def getcpuused():
     return(os.popen("top -n1"))
 
+apikey=config.get("Yeelink","Key")
+
 #apikey为用户id
-apiheaders={'U-ApiKey': '75f2db75863171517f51269317d60d5b','content-type': 'application/json'}
+apiheaders={'U-ApiKey': apikey,'content-type': 'application/json'}
 
 #CPU温度使用 25322 传感器
-cputemp_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/31418/datapoints"
+cputemp_apiurl=config.get("Yeelink","CPUTemp")
 
 #cpu 使用情况使用 25356 传感器
-cpuused_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/31419/datapoints"
+cpuused_apiurl=config.get("Yeelink","CPUUsed")
 
 #内存占用率使用 25357 传感器
-memeryused_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/31420/datapoints"
+memeryused_apiurl=config.get("Yeelink","RAM")
 
 #粉尘传感器
-dust_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/29763/datapoints"
+dust_apiurl=config.get("Yeelink","Dust")
 
 #温度传感器
-temp_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/29762/datapoints"
+temp_apiurl=config.get("Yeelink","Temp")
 
 #气压传感器
-baro_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/31422/datapoints"
+baro_apiurl=config.get("Yeelink","Baro")
 
 #湿度传感器
-humid_apiurl="http://api.yeelink.net/v1.1/device/17191/sensor/29761/datapoints"
+humid_apiurl=config.get("Yeelink","Humid")
 
 #吃了炫迈一样停不下来的循环
 if __name__=='__main__':
