@@ -48,15 +48,9 @@ Time t;
 /* DHT33 (aka. AM232x) statements */
 AM2321 DHT;
 
-/* Korean DSM501A Dust sensor statements */
-int pin = 8;
-unsigned long duration;
-unsigned long starttime;
-unsigned long sampletime_ms = 30000;
-unsigned long lowpulseoccupancy = 0;
-float ratio = 0;
-float concentration = 0;
-
+/* MQ135 toxic gas sensor */
+float GasPPM;
+float GasAlg;
 
 /* Serial input statements */
 String SerialIn;
@@ -96,7 +90,6 @@ void setup(){
       Serial.begin(9600);
       pinMode(RelayControl,OUTPUT);
       bmp085Calibration();
-      starttime = millis();
       t = RTC.getTime();
 }
 
@@ -104,23 +97,8 @@ void setup(){
 
 
 void loop(){
-  
-      /* 
-          DM501A Sensor code
-          Author: Unknown (From taobao's retailer) 
-          See also: http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf
-      */
-      duration = pulseIn(pin, LOW);
-      lowpulseoccupancy = lowpulseoccupancy+duration;
-    
-      if ((millis()-starttime) > sampletime_ms)
-      {
-        ratio = lowpulseoccupancy/(sampletime_ms*10.0);  // Integer percentage 0=>100
-        //concentration = (1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+0.62)/2.5;  // This is the code to convert the ratio to concentration which is the captialist standard (pcs/ft^3)
-        concentration = (ratio * 8.57) / 2.5;    // This is the damn communist standard which is ug/m^3 :-) 
-        lowpulseoccupancy = 0;
-        starttime = millis();
-      } 
+      GasAlg = float(analogRead(A3));
+      GasPPM = (GasAlg / 1023.00) * float(InputVcc()) * 0.25;
       pressure = bmp085GetPressure(bmp085ReadUP());
        
         /* Simplify the code in main Server.ino */
@@ -134,6 +112,5 @@ void loop(){
        
        SolarVoltageCalculate();
        SolarCurrentCalculate();
-
        
 }

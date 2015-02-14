@@ -70,6 +70,7 @@ void SerialDataRead(){
         case 6:
           SerialTimeDebug();
           EEPROMDebug();
+           SerialGasDebug();
           break;
         case 7:
           set_weather_ratio();

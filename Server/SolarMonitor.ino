@@ -66,3 +66,4 @@ void SolarCurrentCalculate(){
   */
   SolarCurrent = (InputVcc() - (InputVcc() / 2)) * (1/185); 
 }
+

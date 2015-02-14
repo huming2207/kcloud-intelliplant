@@ -11,14 +11,14 @@
 void SerialWeatherOutput(){
   DHT.read();
   Serial.print("1,");
-  Serial.print(concentration); 
+  Serial.print(GasPPM); 
   Serial.print(",");
   Serial.print(DHT.humidity / 10);
   Serial.print(",");
   Serial.print(DHT.temperature / 10);
   Serial.print(",");
   Serial.println(long(pressure)); // Here if we use float, it will comes up two more digits and one dot. It will use more serial brandwidth resource and maybe cause the unstability.
-  delay(60); 
+  delay(360); 
 }
 
 void SerialScheduleOutput(){
@@ -46,4 +46,10 @@ void SerialTimeDebug(){
   Serial.print(":");
   Serial.println(t.second());
   
+}
+
+void SerialGasDebug(){
+  Serial.println("***DEBUG: GASMSG******");
+  Serial.print("GASANG:");
+  Serial.println((analogRead(A3)));
 }
