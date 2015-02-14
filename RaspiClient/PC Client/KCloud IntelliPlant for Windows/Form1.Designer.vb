@@ -24,7 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -86,46 +88,42 @@ Partial Class Form1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.Label37 = New System.Windows.Forms.Label()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.TrackBar5 = New System.Windows.Forms.TrackBar()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.TrackBar5 = New System.Windows.Forms.TrackBar()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -139,10 +137,8 @@ Partial Class Form1
         Me.TabPage3.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -150,7 +146,6 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(6, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -169,6 +164,16 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "登录"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.KCloud_IntelliPlant_for_Windows.My.Resources.Resources._3月海报2
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(409, 563)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button9)
@@ -186,6 +191,17 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "登录到灌溉机"
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.White
+        Me.Button9.ForeColor = System.Drawing.Color.Black
+        Me.Button9.Location = New System.Drawing.Point(334, 75)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(155, 40)
+        Me.Button9.TabIndex = 7
+        Me.Button9.Text = "注 销"
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'TextBox3
         '
@@ -800,8 +816,6 @@ Partial Class Form1
         '
         'GroupBox8
         '
-        Me.GroupBox8.Controls.Add(Me.Button8)
-        Me.GroupBox8.Controls.Add(Me.RichTextBox3)
         Me.GroupBox8.Controls.Add(Me.Button7)
         Me.GroupBox8.Controls.Add(Me.Button6)
         Me.GroupBox8.Location = New System.Drawing.Point(366, 235)
@@ -811,8 +825,27 @@ Partial Class Form1
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "高级系统设置"
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(168, 56)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(120, 39)
+        Me.Button7.TabIndex = 6
+        Me.Button7.Text = "重启系统"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(31, 56)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(120, 39)
+        Me.Button6.TabIndex = 5
+        Me.Button6.Text = "更新系统"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.CheckBox7)
         Me.GroupBox7.Controls.Add(Me.Label42)
         Me.GroupBox7.Controls.Add(Me.Label40)
         Me.GroupBox7.Controls.Add(Me.TrackBar5)
@@ -824,12 +857,121 @@ Partial Class Form1
         Me.GroupBox7.Controls.Add(Me.Label37)
         Me.GroupBox7.Controls.Add(Me.ComboBox10)
         Me.GroupBox7.Controls.Add(Me.Label36)
+        Me.GroupBox7.Enabled = False
         Me.GroupBox7.Location = New System.Drawing.Point(12, 235)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(348, 252)
         Me.GroupBox7.TabIndex = 1
         Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "安防监控"
+        Me.GroupBox7.Text = "安防监控（待完善）"
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(20, 164)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(288, 16)
+        Me.CheckBox7.TabIndex = 27
+        Me.CheckBox7.Text = "上传到Yeelink （请注意隐私，家用情况不推荐）"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(261, 123)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(17, 12)
+        Me.Label42.TabIndex = 26
+        Me.Label42.Text = "优"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(94, 123)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(17, 12)
+        Me.Label40.TabIndex = 25
+        Me.Label40.Text = "差"
+        '
+        'TrackBar5
+        '
+        Me.TrackBar5.BackColor = System.Drawing.Color.White
+        Me.TrackBar5.Location = New System.Drawing.Point(107, 116)
+        Me.TrackBar5.Maximum = 100
+        Me.TrackBar5.Minimum = 50
+        Me.TrackBar5.Name = "TrackBar5"
+        Me.TrackBar5.Size = New System.Drawing.Size(154, 45)
+        Me.TrackBar5.TabIndex = 24
+        Me.TrackBar5.Value = 80
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(18, 127)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(65, 12)
+        Me.Label41.TabIndex = 23
+        Me.Label41.Text = "JPEG质量："
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(197, 80)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(62, 21)
+        Me.TextBox13.TabIndex = 22
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(107, 80)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(62, 21)
+        Me.TextBox12.TabIndex = 21
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(180, 83)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(11, 12)
+        Me.Label38.TabIndex = 20
+        Me.Label38.Text = "x"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(18, 83)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(77, 12)
+        Me.Label39.TabIndex = 18
+        Me.Label39.Text = "静态分辨率："
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(152, 45)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(17, 12)
+        Me.Label37.TabIndex = 17
+        Me.Label37.Text = "度"
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Items.AddRange(New Object() {"0", "90", "180", "270"})
+        Me.ComboBox10.Location = New System.Drawing.Point(96, 39)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(53, 20)
+        Me.ComboBox10.TabIndex = 16
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(18, 44)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(77, 12)
+        Me.Label36.TabIndex = 15
+        Me.Label36.Text = "摄像头方向："
         '
         'GroupBox6
         '
@@ -856,157 +998,12 @@ Partial Class Form1
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Yeelink上传设置"
         '
-        'TabPage4
+        'TextBox11
         '
-        Me.TabPage4.Controls.Add(Me.RichTextBox2)
-        Me.TabPage4.Controls.Add(Me.RichTextBox1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(955, 569)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "调试"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.Location = New System.Drawing.Point(16, 414)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(816, 34)
-        Me.RichTextBox2.TabIndex = 1
-        Me.RichTextBox2.Text = ""
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(16, 16)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(816, 335)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.KCloud_IntelliPlant_for_Windows.My.Resources.Resources._3月海报2
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 9)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(409, 563)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(36, 26)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(101, 12)
-        Me.Label28.TabIndex = 0
-        Me.Label28.Text = "湿度传感器地址："
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(36, 51)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(101, 12)
-        Me.Label29.TabIndex = 1
-        Me.Label29.Text = "温度传感器地址："
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(36, 77)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(101, 12)
-        Me.Label30.TabIndex = 2
-        Me.Label30.Text = "气压传感器地址："
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(36, 102)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(83, 12)
-        Me.Label31.TabIndex = 3
-        Me.Label31.Text = "CPU温度地址："
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(36, 127)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(95, 12)
-        Me.Label32.TabIndex = 4
-        Me.Label32.Text = "CPU占用率地址："
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(36, 152)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(101, 12)
-        Me.Label33.TabIndex = 5
-        Me.Label33.Text = "内存占用率地址："
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(36, 179)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(113, 12)
-        Me.Label34.TabIndex = 6
-        Me.Label34.Text = "太阳能传感器地址："
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(149, 17)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox4.TabIndex = 7
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(149, 42)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox5.TabIndex = 8
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(149, 68)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox6.TabIndex = 9
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(149, 95)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox7.TabIndex = 10
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(149, 122)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox8.TabIndex = 11
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(149, 149)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox9.TabIndex = 12
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(149, 176)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox10.TabIndex = 13
-        Me.TextBox10.Text = "待完善"
+        Me.TextBox11.Location = New System.Drawing.Point(563, 20)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox11.TabIndex = 15
         '
         'Label35
         '
@@ -1017,169 +1014,142 @@ Partial Class Form1
         Me.Label35.TabIndex = 14
         Me.Label35.Text = "API密钥："
         '
-        'TextBox11
+        'TextBox10
         '
-        Me.TextBox11.Location = New System.Drawing.Point(563, 20)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(312, 21)
-        Me.TextBox11.TabIndex = 15
+        Me.TextBox10.Enabled = False
+        Me.TextBox10.Location = New System.Drawing.Point(149, 176)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox10.TabIndex = 13
+        Me.TextBox10.Text = "待完善"
         '
-        'Label36
+        'TextBox9
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(18, 44)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(77, 12)
-        Me.Label36.TabIndex = 15
-        Me.Label36.Text = "摄像头方向："
+        Me.TextBox9.Location = New System.Drawing.Point(149, 149)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox9.TabIndex = 12
         '
-        'ComboBox10
+        'TextBox8
         '
-        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Items.AddRange(New Object() {"0", "90", "180", "270"})
-        Me.ComboBox10.Location = New System.Drawing.Point(96, 39)
-        Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(53, 20)
-        Me.ComboBox10.TabIndex = 16
+        Me.TextBox8.Location = New System.Drawing.Point(149, 122)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox8.TabIndex = 11
         '
-        'Label37
+        'TextBox7
         '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(152, 45)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(17, 12)
-        Me.Label37.TabIndex = 17
-        Me.Label37.Text = "度"
+        Me.TextBox7.Location = New System.Drawing.Point(149, 95)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox7.TabIndex = 10
         '
-        'Label38
+        'TextBox6
         '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(180, 83)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(11, 12)
-        Me.Label38.TabIndex = 20
-        Me.Label38.Text = "x"
+        Me.TextBox6.Location = New System.Drawing.Point(149, 68)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox6.TabIndex = 9
         '
-        'Label39
+        'TextBox5
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(18, 83)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(77, 12)
-        Me.Label39.TabIndex = 18
-        Me.Label39.Text = "静态分辨率："
+        Me.TextBox5.Location = New System.Drawing.Point(149, 42)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox5.TabIndex = 8
         '
-        'TextBox12
+        'TextBox4
         '
-        Me.TextBox12.Location = New System.Drawing.Point(107, 80)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(62, 21)
-        Me.TextBox12.TabIndex = 21
+        Me.TextBox4.Location = New System.Drawing.Point(149, 17)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox4.TabIndex = 7
         '
-        'TextBox13
+        'Label34
         '
-        Me.TextBox13.Location = New System.Drawing.Point(197, 80)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(62, 21)
-        Me.TextBox13.TabIndex = 22
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(36, 179)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(113, 12)
+        Me.Label34.TabIndex = 6
+        Me.Label34.Text = "太阳能传感器地址："
         '
-        'Label41
+        'Label33
         '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(18, 127)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(65, 12)
-        Me.Label41.TabIndex = 23
-        Me.Label41.Text = "JPEG质量："
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(36, 152)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(101, 12)
+        Me.Label33.TabIndex = 5
+        Me.Label33.Text = "内存占用率地址："
         '
-        'TrackBar5
+        'Label32
         '
-        Me.TrackBar5.BackColor = System.Drawing.Color.White
-        Me.TrackBar5.Location = New System.Drawing.Point(107, 116)
-        Me.TrackBar5.Maximum = 100
-        Me.TrackBar5.Minimum = 50
-        Me.TrackBar5.Name = "TrackBar5"
-        Me.TrackBar5.Size = New System.Drawing.Size(154, 45)
-        Me.TrackBar5.TabIndex = 24
-        Me.TrackBar5.Value = 80
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(36, 127)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(95, 12)
+        Me.Label32.TabIndex = 4
+        Me.Label32.Text = "CPU占用率地址："
         '
-        'Label40
+        'Label31
         '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(94, 123)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(17, 12)
-        Me.Label40.TabIndex = 25
-        Me.Label40.Text = "差"
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(36, 102)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(83, 12)
+        Me.Label31.TabIndex = 3
+        Me.Label31.Text = "CPU温度地址："
         '
-        'Label42
+        'Label30
         '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(261, 123)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(17, 12)
-        Me.Label42.TabIndex = 26
-        Me.Label42.Text = "优"
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(36, 77)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(101, 12)
+        Me.Label30.TabIndex = 2
+        Me.Label30.Text = "气压传感器地址："
         '
-        'Button6
+        'Label29
         '
-        Me.Button6.Location = New System.Drawing.Point(30, 196)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(120, 39)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "更新系统"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(36, 51)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(101, 12)
+        Me.Label29.TabIndex = 1
+        Me.Label29.Text = "温度传感器地址："
         '
-        'Button7
+        'Label28
         '
-        Me.Button7.Location = New System.Drawing.Point(156, 196)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(120, 39)
-        Me.Button7.TabIndex = 6
-        Me.Button7.Text = "重启系统"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(36, 26)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(101, 12)
+        Me.Label28.TabIndex = 0
+        Me.Label28.Text = "湿度传感器地址："
         '
-        'RichTextBox3
+        'RichTextBox4
         '
-        Me.RichTextBox3.Location = New System.Drawing.Point(22, 27)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox3.Size = New System.Drawing.Size(546, 158)
-        Me.RichTextBox3.TabIndex = 7
-        Me.RichTextBox3.Text = ""
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(280, 196)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(120, 39)
-        Me.Button8.TabIndex = 8
-        Me.Button8.Text = "输出log"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.White
-        Me.Button9.ForeColor = System.Drawing.Color.Black
-        Me.Button9.Location = New System.Drawing.Point(334, 75)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(155, 40)
-        Me.Button9.TabIndex = 7
-        Me.Button9.Text = "注 销"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.RichTextBox4.Location = New System.Drawing.Point(6, 605)
+        Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBox4.Size = New System.Drawing.Size(959, 96)
+        Me.RichTextBox4.TabIndex = 1
+        Me.RichTextBox4.Text = ""
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(971, 603)
+        Me.ClientSize = New System.Drawing.Size(971, 700)
+        Me.Controls.Add(Me.RichTextBox4)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "KCloud IntelliPlant"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -1199,11 +1169,9 @@ Partial Class Form1
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1274,10 +1242,6 @@ Partial Class Form1
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
-    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label42 As System.Windows.Forms.Label
@@ -1307,7 +1271,8 @@ Partial Class Form1
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents RichTextBox4 As System.Windows.Forms.RichTextBox
+    Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
 
 End Class
