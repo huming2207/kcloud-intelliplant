@@ -79,6 +79,22 @@ Public Class Form1
         TextBox7.Text = ReadIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "CPUTemp", TextBox7.Text)
         TextBox8.Text = ReadIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "CPUUsed", TextBox8.Text)
         TextBox9.Text = ReadIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "RAM", TextBox9.Text)
+        ComboBox2.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Hr", ComboBox2.SelectedItem())
+        ComboBox3.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Min", ComboBox3.SelectedItem())
+        ComboBox8.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Capacity", ComboBox8.SelectedItem())
+        ' CheckBox1.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "MainSwitch", Convert.ToInt32(CheckBox1.Checked)))
+        ' CheckBox4.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "MainSwitch", Convert.ToInt32(CheckBox4.Checked)))
+        ComboBox5.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Hr", ComboBox5.SelectedItem())
+        ComboBox4.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Min", ComboBox4.SelectedItem())
+        ComboBox1.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Capacity", ComboBox1.SelectedItem())
+        '   CheckBox2.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "MainSwitch", Convert.ToInt32(CheckBox2.Checked)))
+        '   CheckBox5.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "MainSwitch", Convert.ToInt32(CheckBox5.Checked)))
+        ComboBox9.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Hr", ComboBox9.SelectedItem())
+        ComboBox7.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Min", ComboBox7.SelectedItem())
+        ComboBox6.SelectedItem() = ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Capacity", ComboBox6.SelectedItem())
+        ' CheckBox3.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "MainSwitch", Convert.ToInt32(CheckBox3.Checked)))
+        ' CheckBox6.Checked = Convert.ToBoolean(ReadIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "AutoSwitch", Convert.ToInt32(CheckBox6.Checked)))
+        TrackBar1.Value = ReadIni(Application.StartupPath() + "\Settings.conf", "Ratio", "AutoRatio", TrackBar1.Value)
         RichTextBox4.AppendText("完成，您可以开始设置了！" + vbCrLf)
         MsgBox("成功联机，请进行下一步操作！", 0, "恭喜！")
         Button9.Enabled = True
@@ -103,11 +119,42 @@ Public Class Form1
             MsgBox("服务器未连接，保存失败！", 0, "连接错误")
             Exit Sub
         End If
-        success = ssh.SendReqExec(channelNum, "sudo killall -9 python")
+        RichTextBox4.AppendText("关闭服务端......" + vbCrLf)
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """sudo killall python""", AppWinStyle.NormalNoFocus, True)
+        RichTextBox4.AppendText("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """sudo killall python""" + vbCrLf)
+        RichTextBox4.AppendText("写入设置......" + vbCrLf)
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Hr", ComboBox2.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Min", ComboBox3.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Sec", "0")
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "Capacity", ComboBox8.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "MainSwitch", Convert.ToInt32(CheckBox1.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule1", "AutoSwitch", Convert.ToInt32(CheckBox4.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Hr", ComboBox5.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Min", ComboBox4.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Sec", "0")
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "Capacity", ComboBox1.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "MainSwitch", Convert.ToInt32(CheckBox2.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule2", "AutoSwitch", Convert.ToInt32(CheckBox5.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Hr", ComboBox9.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Min", ComboBox7.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Sec", "0")
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "Capacity", ComboBox6.SelectedItem())
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "MainSwitch", Convert.ToInt32(CheckBox3.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Schedule3", "AutoSwitch", Convert.ToInt32(CheckBox6.Checked))
+        writeIni(Application.StartupPath() + "\Settings.conf", "Ratio", "AutoRatio", TrackBar1.Value)
+        RichTextBox4.AppendText("准备上传数据......" + vbCrLf)
+        RichTextBox4.AppendText("等待上传......" + vbCrLf)
+        success = sftp.UploadFileByName("/home/pi/Settings.conf", Application.StartupPath() + "\Settings.conf")
         If (success <> 1) Then
-            MsgBox(ssh.LastErrorText)
-            Exit Sub
+            RichTextBox4.AppendText(sftp.LastErrorText)
         End If
+        Button4.Enabled = True
+        RichTextBox4.AppendText("完成，设置已生效！" + vbCrLf)
+        RichTextBox4.AppendText("启动服务端发送设置......" + vbCrLf)
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """python yeelink.py --set-arduino"" ", AppWinStyle.NormalNoFocus, True)
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """sudo reboot""", AppWinStyle.NormalNoFocus, True)
+        RichTextBox4.AppendText("......完成！等待设备重启后可继续连接！" + vbCrLf)
+
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
@@ -123,6 +170,8 @@ Public Class Form1
             Exit Sub
         End If
         Button4.Enabled = False
+        RichTextBox4.AppendText("关闭服务端......" + vbCrLf)
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + " " + TextBox3.Text + " " + """sudo killall python""", AppWinStyle.NormalNoFocus, True)
         RichTextBox4.AppendText("写入设置中......" + vbCrLf)
         writeIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "Key", TextBox11.Text)
         writeIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "Humid", TextBox4.Text)
@@ -144,8 +193,10 @@ Public Class Form1
             RichTextBox4.AppendText(sftp.LastErrorText)
             Exit Sub
         End If
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + " " + TextBox3.Text + " " + """sudo reboot""", AppWinStyle.NormalNoFocus, True)
         Button4.Enabled = True
         RichTextBox4.AppendText("完成，设置已生效！" + vbCrLf)
+
     End Sub
 
     Private Sub RichTextBox4_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox4.TextChanged
@@ -158,4 +209,21 @@ Public Class Form1
 
     End Sub
 
+    Public Function RunCMD(ByVal Commands As String, Optional ByVal TimeOutSencond As Integer = 3 * 60) As String
+        Dim myProcess As New Process()
+        Dim myProcessStartInfo As New ProcessStartInfo("cmd.exe")
+        myProcessStartInfo.UseShellExecute = False
+        myProcessStartInfo.RedirectStandardOutput = True
+        myProcessStartInfo.CreateNoWindow = True
+        myProcessStartInfo.Arguments = "/c " & Commands
+        myProcess.StartInfo = myProcessStartInfo
+        myProcess.Start()
+        myProcess.WaitForExit(TimeOutSencond * 1000)
+        Dim myStreamReader As IO.StreamReader = myProcess.StandardOutput
+        Dim myString As String = myStreamReader.ReadToEnd()
+        myProcess.Close()
+        Return myString
+    End Function
+
 End Class
+

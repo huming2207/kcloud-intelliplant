@@ -18,13 +18,9 @@ void CalculateWeather(){
      2. ... (To be continued. I will ask my mum and grandma some advices, who is expert in agriculture.)
    */
   DHT.read();
-  TempRatio = int(EEPROM.read(20));
-  HumidRatio = int(EEPROM.read(21));
-  SolarRatio = int(EEPROM.read(22));
-  PressureRatio = int(EEPROM.read(23));
-  
-  XWeatherOut = ((SolarVoltage * SolarCurrent)/SolarRatio) + (DHT.humidity/HumidRatio) + (DHT.temperature/TempRatio) + (pressure/PressureRatio);
-  YWeatherOut = -XWeatherOut + 60;
+  Ratio = int(EEPROM.read(20));
+  XWeatherOut = (int((DHT.humidity/2)) - int((DHT.temperature/1.5)) - int((pressure/5000)));
+  YWeatherOut = -XWeatherOut + 60 + Ratio;
   if (YWeatherOut > 60){
     YWeatherOut = 60; // Force the output shorter than 60.
   }

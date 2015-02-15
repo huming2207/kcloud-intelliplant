@@ -35,24 +35,10 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TrackBar4 = New System.Windows.Forms.TrackBar()
-        Me.TrackBar3 = New System.Windows.Forms.TrackBar()
-        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
@@ -85,7 +71,6 @@ Partial Class Form1
         Me.Label23 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -121,15 +106,13 @@ Partial Class Form1
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -265,7 +248,6 @@ Partial Class Form1
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button3)
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.GroupBox5)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
@@ -279,196 +261,55 @@ Partial Class Form1
         Me.TabPage2.Text = "灌溉节点设置"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(691, 513)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(124, 46)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "恢复出厂设置"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(561, 513)
+        Me.Button2.Location = New System.Drawing.Point(15, 508)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(124, 46)
+        Me.Button2.Size = New System.Drawing.Size(934, 46)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "保 存"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.Label27)
-        Me.GroupBox5.Controls.Add(Me.Label26)
-        Me.GroupBox5.Controls.Add(Me.Label25)
-        Me.GroupBox5.Controls.Add(Me.Label22)
-        Me.GroupBox5.Controls.Add(Me.Label21)
-        Me.GroupBox5.Controls.Add(Me.Label20)
+        Me.GroupBox5.Controls.Add(Me.Label14)
         Me.GroupBox5.Controls.Add(Me.Label19)
         Me.GroupBox5.Controls.Add(Me.Label18)
-        Me.GroupBox5.Controls.Add(Me.Label17)
-        Me.GroupBox5.Controls.Add(Me.Label16)
-        Me.GroupBox5.Controls.Add(Me.Label15)
-        Me.GroupBox5.Controls.Add(Me.Label14)
-        Me.GroupBox5.Controls.Add(Me.TrackBar4)
-        Me.GroupBox5.Controls.Add(Me.TrackBar3)
-        Me.GroupBox5.Controls.Add(Me.TrackBar2)
         Me.GroupBox5.Controls.Add(Me.TrackBar1)
         Me.GroupBox5.Location = New System.Drawing.Point(15, 350)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(800, 152)
+        Me.GroupBox5.Size = New System.Drawing.Size(934, 152)
         Me.GroupBox5.TabIndex = 3
         Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "自动灌溉感度"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(565, 99)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(17, 12)
-        Me.Label27.TabIndex = 15
-        Me.Label27.Text = "弱"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(565, 49)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(17, 12)
-        Me.Label26.TabIndex = 14
-        Me.Label26.Text = "弱"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(738, 99)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(17, 12)
-        Me.Label25.TabIndex = 13
-        Me.Label25.Text = "强"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(738, 49)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(17, 12)
-        Me.Label22.TabIndex = 12
-        Me.Label22.Text = "强"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(286, 99)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(17, 12)
-        Me.Label21.TabIndex = 11
-        Me.Label21.Text = "强"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(118, 99)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(17, 12)
-        Me.Label20.TabIndex = 10
-        Me.Label20.Text = "弱"
+        Me.GroupBox5.Text = "自动灌溉补偿（秒）"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(286, 49)
+        Me.Label19.Location = New System.Drawing.Point(821, 77)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(17, 12)
+        Me.Label19.Size = New System.Drawing.Size(23, 12)
         Me.Label19.TabIndex = 9
-        Me.Label19.Text = "强"
+        Me.Label19.Text = "+20"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(118, 49)
+        Me.Label18.Location = New System.Drawing.Point(107, 77)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(17, 12)
+        Me.Label18.Size = New System.Drawing.Size(23, 12)
         Me.Label18.TabIndex = 8
-        Me.Label18.Text = "弱"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(456, 99)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(29, 12)
-        Me.Label17.TabIndex = 7
-        Me.Label17.Text = "光照"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(23, 99)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(29, 12)
-        Me.Label16.TabIndex = 6
-        Me.Label16.Text = "气压"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(456, 49)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(29, 12)
-        Me.Label15.TabIndex = 5
-        Me.Label15.Text = "湿度"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(23, 49)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(29, 12)
-        Me.Label14.TabIndex = 4
-        Me.Label14.Text = "温度"
-        '
-        'TrackBar4
-        '
-        Me.TrackBar4.BackColor = System.Drawing.Color.White
-        Me.TrackBar4.Location = New System.Drawing.Point(578, 89)
-        Me.TrackBar4.Maximum = 100
-        Me.TrackBar4.Name = "TrackBar4"
-        Me.TrackBar4.Size = New System.Drawing.Size(154, 45)
-        Me.TrackBar4.TabIndex = 3
-        Me.TrackBar4.Value = 50
-        '
-        'TrackBar3
-        '
-        Me.TrackBar3.BackColor = System.Drawing.Color.White
-        Me.TrackBar3.Location = New System.Drawing.Point(578, 38)
-        Me.TrackBar3.Maximum = 100
-        Me.TrackBar3.Name = "TrackBar3"
-        Me.TrackBar3.Size = New System.Drawing.Size(154, 45)
-        Me.TrackBar3.TabIndex = 2
-        Me.TrackBar3.Value = 50
-        '
-        'TrackBar2
-        '
-        Me.TrackBar2.BackColor = System.Drawing.Color.White
-        Me.TrackBar2.Location = New System.Drawing.Point(130, 89)
-        Me.TrackBar2.Maximum = 100
-        Me.TrackBar2.Name = "TrackBar2"
-        Me.TrackBar2.Size = New System.Drawing.Size(154, 45)
-        Me.TrackBar2.TabIndex = 1
-        Me.TrackBar2.Value = 50
+        Me.Label18.Text = "-20"
         '
         'TrackBar1
         '
         Me.TrackBar1.BackColor = System.Drawing.Color.White
-        Me.TrackBar1.Location = New System.Drawing.Point(130, 38)
-        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Location = New System.Drawing.Point(136, 65)
+        Me.TrackBar1.Maximum = 20
+        Me.TrackBar1.Minimum = -20
         Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(154, 45)
+        Me.TrackBar1.Size = New System.Drawing.Size(679, 45)
         Me.TrackBar1.TabIndex = 0
-        Me.TrackBar1.Value = 50
         '
         'GroupBox4
         '
@@ -483,7 +324,7 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.ComboBox9)
         Me.GroupBox4.Location = New System.Drawing.Point(15, 239)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(800, 105)
+        Me.GroupBox4.Size = New System.Drawing.Size(934, 105)
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "计划任务#3"
@@ -587,7 +428,7 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.ComboBox5)
         Me.GroupBox3.Location = New System.Drawing.Point(15, 128)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(800, 105)
+        Me.GroupBox3.Size = New System.Drawing.Size(934, 105)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "计划任务#2"
@@ -691,7 +532,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Location = New System.Drawing.Point(15, 17)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(800, 105)
+        Me.GroupBox2.Size = New System.Drawing.Size(934, 105)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "计划任务#1"
@@ -784,7 +625,6 @@ Partial Class Form1
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button5)
         Me.TabPage3.Controls.Add(Me.Button4)
         Me.TabPage3.Controls.Add(Me.GroupBox8)
         Me.TabPage3.Controls.Add(Me.GroupBox7)
@@ -796,20 +636,11 @@ Partial Class Form1
         Me.TabPage3.Text = "灌溉主控器设置"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(772, 503)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(177, 50)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "恢复出厂设置"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(589, 503)
+        Me.Button4.Location = New System.Drawing.Point(12, 493)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(177, 50)
+        Me.Button4.Size = New System.Drawing.Size(937, 62)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "保 存"
         Me.Button4.UseVisualStyleBackColor = True
@@ -1133,18 +964,28 @@ Partial Class Form1
         Me.RichTextBox4.Location = New System.Drawing.Point(6, 605)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox4.Size = New System.Drawing.Size(959, 96)
+        Me.RichTextBox4.Size = New System.Drawing.Size(959, 127)
         Me.RichTextBox4.TabIndex = 1
         Me.RichTextBox4.Text = ""
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(471, 99)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(11, 12)
+        Me.Label14.TabIndex = 10
+        Me.Label14.Text = "0"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(971, 700)
+        Me.ClientSize = New System.Drawing.Size(971, 744)
         Me.Controls.Add(Me.RichTextBox4)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form1"
         Me.Text = "KCloud IntelliPlant"
         Me.TabControl1.ResumeLayout(False)
@@ -1155,9 +996,6 @@ Partial Class Form1
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
@@ -1186,7 +1024,6 @@ Partial Class Form1
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
@@ -1196,7 +1033,6 @@ Partial Class Form1
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -1227,19 +1063,6 @@ Partial Class Form1
     Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TrackBar4 As System.Windows.Forms.TrackBar
-    Friend WithEvents TrackBar3 As System.Windows.Forms.TrackBar
-    Friend WithEvents TrackBar2 As System.Windows.Forms.TrackBar
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Button7 As System.Windows.Forms.Button
@@ -1274,5 +1097,6 @@ Partial Class Form1
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents RichTextBox4 As System.Windows.Forms.RichTextBox
     Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
 
 End Class

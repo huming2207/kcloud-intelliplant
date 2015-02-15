@@ -57,7 +57,7 @@ String SerialIn;
 float SerialNumData[9] = {0};
 
 /* Relay control pin on D7 */
-int RelayControl = 13; // Temporarily change it to D13 for debugging
+int RelayControl = 8;
 
 /* Declare some schedule integers */
 int ScheduleHr;
@@ -69,10 +69,7 @@ int ScheduleNum;
 int Sec1;
 int Min1;
 int Hr1;
-int TempRatio;
-int HumidRatio;
-int PressureRatio;
-int SolarRatio;
+int Ratio;
 int XWeatherOut;
 int YWeatherOut;
 int AutoSwitch;

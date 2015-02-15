@@ -57,9 +57,6 @@ void set_relay_3(){
 }
 
 void set_weather_ratio(){
-  EEPROM.write(20, byte(SerialNumData[1])); // Temperature ratio
-  EEPROM.write(21, byte(SerialNumData[2])); // Humidity ratio
-  EEPROM.write(22, byte(SerialNumData[3])); // Solar ratio
-  EEPROM.write(23, byte(SerialNumData[4])); // Air pressure ratio
+  EEPROM.write(20, byte(SerialNumData[1])); //  ratio
 }
 
