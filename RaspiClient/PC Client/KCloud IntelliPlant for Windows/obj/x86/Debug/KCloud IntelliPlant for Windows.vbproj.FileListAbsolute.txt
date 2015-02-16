@@ -8,6 +8,5 @@ D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant fo
 D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\KCloud IntelliPlant for Windows.exe
 D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\KCloud IntelliPlant for Windows.xml
 D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\KCloud IntelliPlant for Windows.pdb
-D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\KCloud IntelliPlant for Windows.vbprojResolveAssemblyReference.cache
 D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\Interop.CHILKATSSHLib.dll
 D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\x86\Debug\KCloud IntelliPlant for Windows.vbproj.ResolveComReference.cache

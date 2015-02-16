@@ -171,7 +171,7 @@ Public Class Form1
         End If
         Button4.Enabled = False
         RichTextBox4.AppendText("关闭服务端......" + vbCrLf)
-        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + " " + TextBox3.Text + " " + """sudo killall python""", AppWinStyle.NormalNoFocus, True)
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """sudo killall python""", AppWinStyle.NormalNoFocus, True)
         RichTextBox4.AppendText("写入设置中......" + vbCrLf)
         writeIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "Key", TextBox11.Text)
         writeIni(Application.StartupPath() + "\Settings.conf", "Yeelink", "Humid", TextBox4.Text)
@@ -193,9 +193,10 @@ Public Class Form1
             RichTextBox4.AppendText(sftp.LastErrorText)
             Exit Sub
         End If
-        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + " " + TextBox3.Text + " " + """sudo reboot""", AppWinStyle.NormalNoFocus, True)
+
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + TextBox3.Text + " " + """sudo reboot""", AppWinStyle.NormalNoFocus, True)
         Button4.Enabled = True
-        RichTextBox4.AppendText("完成，设置已生效！" + vbCrLf)
+        RichTextBox4.AppendText("完成，设置已生效！等待设备重启！" + vbCrLf)
 
     End Sub
 
@@ -225,5 +226,13 @@ Public Class Form1
         Return myString
     End Function
 
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Shell("plink.exe -ssh -pw " + TextBox2.Text + " " + TextBox1.Text + "@" + " " + TextBox3.Text + " " + """sudo reboot""", AppWinStyle.NormalNoFocus, True)
+        RichTextBox4.AppendText("完成，设置已生效！" + vbCrLf)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
 

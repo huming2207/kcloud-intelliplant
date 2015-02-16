@@ -21,6 +21,7 @@
 #include <EEPROM.h>
 #include <Wire.h>
 #include <DS3231RTC.h>
+#include <avr/wdt.h>
 
  /* BMP180/BMP085 barometer statements and settings */
 #define BMP085_ADDRESS 0x77 
@@ -63,15 +64,15 @@ int RelayControl = 8;
 int ScheduleHr;
 int ScheduleMin;
 int ScheduleSec;
-int ScheduleCapacity;
+unsigned long ScheduleCapacity;
 int ScheduleStatus;
 int ScheduleNum;
 int Sec1;
 int Min1;
 int Hr1;
 int Ratio;
-int XWeatherOut;
-int YWeatherOut;
+long XWeatherOut;
+unsigned long YWeatherOut;
 int AutoSwitch;
 int MainSwitch = 0;
 
@@ -86,6 +87,7 @@ void setup(){
       pinMode(8,INPUT);
       Serial.begin(9600);
       pinMode(RelayControl,OUTPUT);
+      digitalWrite(RelayControl,LOW);
       bmp085Calibration();
       t = RTC.getTime();
 }
@@ -110,4 +112,16 @@ void loop(){
        SolarVoltageCalculate();
        SolarCurrentCalculate();
        
+}
+
+void BoardReset(){
+  /* 
+      Use a very short watchdog loop to force reset the arduino
+      See also: http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf
+                http://www.xappsoftware.com/wordpress/2013/06/24/three-ways-to-reset-an-arduino-board-by-code/
+  */
+  wdt_enable(WDTO_15MS);
+  while(1)
+  {
+  }
 }

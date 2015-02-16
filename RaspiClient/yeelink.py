@@ -27,7 +27,7 @@ def readlineCR(port):
         if ch=='\r' or ch=='':
             return rv
 
-port = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=3.0)
+port = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=0.3)
 if port.isOpen == False:
     print "Serial port is unavailable, Exit..."
     exit()
@@ -43,54 +43,51 @@ def getcpuused():
     return(os.popen("top -n1"))
 
 if len(sys.argv) > 1:
-	Hr1 = config.getint('Schedule1', 'Hr')
-	Min1 = config.getint('Schedule1', 'Min')
-	Sec1 = config.getint('Schedule1', 'Sec')
-	Capacity1 = config.getint('Schedule1', 'Capacity')
-	MainSwitch1 = config.getint('Schedule1', 'MainSwitch')
-	AutoSwitch1 = config.getint('Schedule1', 'AutoSwitch')
-	Hr2 = config.getint('Schedule2', 'Hr')
-	Min2 = config.getint('Schedule2', 'Min')
-	Sec2 = config.getint('Schedule2', 'Sec')
-	Capacity2 = config.getint('Schedule2', 'Capacity')
-	MainSwitch2 = config.getint('Schedule2', 'MainSwitch')
-	AutoSwitch2 = config.getint('Schedule2', 'AutoSwitch')
-	Hr3 = config.getint('Schedule3', 'Hr')
-	Min3 = config.getint('Schedule3', 'Min')
-	Sec3 = config.getint('Schedule3', 'Sec')
-	Capacity3 = config.getint('Schedule3', 'Capacity')
-	MainSwitch3 = config.getint('Schedule3', 'MainSwitch')
-	AutoSwitch3 = config.getint('Schedule3', 'AutoSwitch')
-	SolarRatio = config.getint('W2WC', 'Solar')
-	HumidRatio = config.getint('W2WC', 'Humid')
-	TempRatio = config.getint('W2WC', 'Temp')
-	BaroRatio = config.getint('W2WC', 'Baro')
+	Hr1 = config.get('Schedule1', 'Hr')
+	Min1 = config.get('Schedule1', 'Min')
+	Sec1 = config.get('Schedule1', 'Sec')
+	Capacity1 = config.get('Schedule1', 'Capacity')
+	MainSwitch1 = config.get('Schedule1', 'MainSwitch')
+	AutoSwitch1 = config.get('Schedule1', 'AutoSwitch')
+	Hr2 = config.get('Schedule2', 'Hr')
+	Min2 = config.get('Schedule2', 'Min')
+	Sec2 = config.get('Schedule2', 'Sec')
+	Capacity2 = config.get('Schedule2', 'Capacity')
+	MainSwitch2 = config.get('Schedule2', 'MainSwitch')
+	AutoSwitch2 = config.get('Schedule2', 'AutoSwitch')
+	Hr3 = config.get('Schedule3', 'Hr')
+	Min3 = config.get('Schedule3', 'Min')
+	Sec3 = config.get('Schedule3', 'Sec')
+	Capacity3 = config.get('Schedule3', 'Capacity')
+	MainSwitch3 = config.get('Schedule3', 'MainSwitch')
+	AutoSwitch3 = config.get('Schedule3', 'AutoSwitch')
+	Ratio = config.get('Ratio', 'AutoRatio')
 	Schedule1_payload = '2,' + Hr1 + ',' + Min1 + ',' + Sec1 + ',' + Capacity1 + ',' + MainSwitch1 + ',' + AutoSwitch1 + '\r\n'
 	Schedule2_payload = '3,' + Hr2 + ',' + Min2 + ',' + Sec2 + ',' + Capacity2 + ',' + MainSwitch2 + ',' + AutoSwitch2 + '\r\n'
 	Schedule3_payload = '4,' + Hr3 + ',' + Min3 + ',' + Sec3 + ',' + Capacity3 + ',' + MainSwitch3 + ',' + AutoSwitch3 + '\r\n'
-	Weather_payload = '7,' + TempRatio + ',' + HumidRatio + ',' + SolarRatio + ',' + BaroRatio + '\r\n'
-	print "Now setting up the Arduino."
+	Ratio_payload = '7,' + Ratio +  '\r\n'
+	print "Now setting up the node."
 	print Schedule1_payload
 	print Schedule2_payload
 	print Schedule3_payload
-	print Weather_payload
+	print Ratio_payload
 	port.write(Schedule1_payload)
 	print "......30%"
-	sleep(3)
+	time.sleep(2)
 	port.write(Schedule2_payload)
 	print "............60%"
-	sleep(3)
+	time.sleep(2)
 	port.write(Schedule3_payload)
 	print "..............80%"
-	sleep(3)
-	port.write(Weather_payload)
+	time.sleep(2)
+	port.write(Ratio_payload)
 	print "....................DONE!!!!!!"
 	print "Now, re-run the program please!"
-	sleep(3)
-	port.close()
-	exit()
+	time.sleep(2)
+
 	
-	
+
+
 #吃了炫迈一样停不下来的循环
 if __name__=='__main__':
     while 1:
@@ -105,13 +102,24 @@ if __name__=='__main__':
         humid_apiurl=config.get("Yeelink","Humid")
 	
         #预处理数据
-        rcv = readlineCR(port)
-        rcv_split = rcv.split(",")
-        dust_payload = {'value':rcv_split[1]}
-        humid_payload = {'value':rcv_split[2]}
-        temp_payload = {'value':rcv_split[3]}
-        baro_payload = {'value':filter(str.isdigit, rcv_split[4])}
-	
+        try:
+            rcv = readlineCR(port)
+            rcv_split = rcv.split(",")
+            dust_payload = {'value':rcv_split[1]}
+            humid_payload = {'value':rcv_split[2]}
+            temp_payload = {'value':rcv_split[3]}
+            baro_payload = {'value':filter(str.isdigit, rcv_split[4])}
+		#有些时候节点会发过来一些很奇怪的数据，这时可能是它死机或出错了，所以这里就发一个指令让它重启一下试试。
+        except IndexError:
+            port.write("8,1\r\n")
+            print "***Caught an error or unreadable data from the node, rebooting the node by default."
+            time.sleep(5)
+            rcv = readlineCR(port)
+            rcv_split = rcv.split(",")
+            dust_payload = {'value':rcv_split[1]}
+            humid_payload = {'value':rcv_split[2]}
+            temp_payload = {'value':rcv_split[3]}
+            baro_payload = {'value':filter(str.isdigit, rcv_split[4])}
 	
         #上传灰尘传感器数据
         r=requests.post(dust_apiurl, headers=apiheaders, data=json.dumps(dust_payload))
@@ -159,4 +167,4 @@ if __name__=='__main__':
                 
                 print memeryusedratiostr
                 print "================"
-        time.sleep(1)
+        time.sleep(3)

@@ -53,14 +53,16 @@ void RelaySchedule1(){
     if (AutoSwitch == 1)
     {
         SerialScheduleOutput();
-        delay(YWeatherOut * 1000);
+        delay(YWeatherOut * 1000L);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
     else
     {
         SerialScheduleOutput();
-        delay(ScheduleCapacity * 1000);
+        delay(ScheduleCapacity * 1000L);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
   }
 }
@@ -82,14 +84,16 @@ void RelaySchedule2(){
     if (AutoSwitch == 1)
     {
         SerialScheduleOutput();
-        delay(YWeatherOut * 1000);
+        delay(YWeatherOut * 1000L);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
     else
     {
         SerialScheduleOutput();
-        delay(ScheduleCapacity * 1000);
+        delay(ScheduleCapacity * 1000L);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
   }
 }
@@ -110,14 +114,16 @@ void RelaySchedule3(){
     if (AutoSwitch == 1)
     {
         SerialScheduleOutput();
-        delay(YWeatherOut * 1000);
+        delay(YWeatherOut * 1000L);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
     else
     {
         SerialScheduleOutput();
         delay(ScheduleCapacity * 1000);
         digitalWrite(RelayControl,LOW);
+        //BoardReset();
     }
   }
 }

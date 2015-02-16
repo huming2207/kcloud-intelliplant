@@ -75,6 +75,9 @@ void SerialDataRead(){
         case 7:
           set_weather_ratio();
           break;
+        case 8:
+          BoardReset();
+          break;
         default: 
           break;
         }

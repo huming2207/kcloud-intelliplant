@@ -37,6 +37,7 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
@@ -74,7 +75,6 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -106,7 +106,6 @@ Partial Class Form1
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -282,6 +281,15 @@ Partial Class Form1
         Me.GroupBox5.TabIndex = 3
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "自动灌溉补偿（秒）"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(471, 99)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(11, 12)
+        Me.Label14.TabIndex = 10
+        Me.Label14.Text = "0"
         '
         'Label19
         '
@@ -648,7 +656,6 @@ Partial Class Form1
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.Button7)
-        Me.GroupBox8.Controls.Add(Me.Button6)
         Me.GroupBox8.Location = New System.Drawing.Point(366, 235)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(583, 252)
@@ -658,21 +665,12 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(168, 56)
+        Me.Button7.Location = New System.Drawing.Point(24, 29)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(120, 39)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "重启系统"
         Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(31, 56)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(120, 39)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "更新系统"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'GroupBox7
         '
@@ -968,15 +966,6 @@ Partial Class Form1
         Me.RichTextBox4.TabIndex = 1
         Me.RichTextBox4.Text = ""
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(471, 99)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(11, 12)
-        Me.Label14.TabIndex = 10
-        Me.Label14.Text = "0"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -1066,7 +1055,6 @@ Partial Class Form1
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label42 As System.Windows.Forms.Label
     Friend WithEvents Label40 As System.Windows.Forms.Label
     Friend WithEvents TrackBar5 As System.Windows.Forms.TrackBar
