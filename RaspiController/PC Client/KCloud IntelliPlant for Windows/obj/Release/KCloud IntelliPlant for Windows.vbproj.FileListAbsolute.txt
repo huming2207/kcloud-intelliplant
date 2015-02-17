@@ -1,0 +1,16 @@
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe.config
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\Interop.CHILKATSSHLib.dll
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.vbproj.ResolveComReference.cache
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe.manifest
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.application
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.pdb
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.xml
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud_IntelliPlant_for_Windows.Form1.resources
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud_IntelliPlant_for_Windows.Resources.resources
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.vbproj.GenerateResource.Cache
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.exe.manifest
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.application
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.exe
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.xml
+D:\软件工程\kcloud-intelliplant\RaspiClient\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.pdb
