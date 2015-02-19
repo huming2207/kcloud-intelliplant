@@ -1,15 +1,15 @@
-/* 
+ï»¿/* 
     SHSS KCloud IntelliPlant Server (master) source code
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Automation Electronic Project Group, Technical Club Union of Shenzhen Highschool of Science
     ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
     
-	ÉîÛÚ¿ÆÑ§¸ßÖĞ ¿Æ¸ßÔÆ×ÓÏîÄ¿ ÖÇ»ÛÅ©ÒµÎïÁªÍø¹à¸È»ú
-	ÉîÛÚ¿ÆÑ§¸ßÖĞ¼¼ÊõÀàÉçÍÅÁªºÏ»á×Ô¶¯»¯µç×ÓÏîÄ¿×é 
-	³ÌĞò×÷Õß£ººúÃú huming2207@gmail.com  
+	æ·±åœ³ç§‘å­¦é«˜ä¸­ ç§‘é«˜äº‘å­é¡¹ç›® æ™ºæ…§å†œä¸šç‰©è”ç½‘çŒæº‰æœº
+	æ·±åœ³ç§‘å­¦é«˜ä¸­æŠ€æœ¯ç±»ç¤¾å›¢è”åˆä¼šè‡ªåŠ¨åŒ–ç”µå­é¡¹ç›®ç»„ 
+	ç¨‹åºä½œè€…ï¼šèƒ¡é“­ huming2207@gmail.com  
 
     Server.ino -->> This is the main arduino project file, including some statements and header files.
-                    ÕâÊÇArduinoÖ÷ÎÄ¼ş£¬°üº¬Ò»Ğ©º¯ÊıÉùÃ÷ºÍÉè±¸³õÊ¼»¯Ö¸ÁîµÈ¡£
+                    è¿™æ˜¯Arduinoä¸»æ–‡ä»¶ï¼ŒåŒ…å«ä¸€äº›å‡½æ•°å£°æ˜å’Œè®¾å¤‡åˆå§‹åŒ–æŒ‡ä»¤ç­‰ã€‚
 
     This project contains some 3rd party libraries, including:
     AM232x temperature & humidity sensor library
@@ -20,14 +20,14 @@
     
     ...and some other libraries from TAOBAO.COM's retailer which the authors are unknown. I don't know who they are but thanks for their hard works.
 
-	±¾³ÌĞòÊ¹ÓÃÁË¼¸¸öµÚÈı·½¿â£¬Ä¿Ç°ÒÑÖª×÷ÕßµÄ°üÀ¨£º
-	AM232xÎÂÊª¶È´«¸ĞÆ÷¿â
-	×÷Õß£ºÍõ¶«             ÏîÄ¿µØÖ·£ºhttps://github.com/wangdong/AM2321
+	æœ¬ç¨‹åºä½¿ç”¨äº†å‡ ä¸ªç¬¬ä¸‰æ–¹åº“ï¼Œç›®å‰å·²çŸ¥ä½œè€…çš„åŒ…æ‹¬ï¼š
+	AM232xæ¸©æ¹¿åº¦ä¼ æ„Ÿå™¨åº“
+	ä½œè€…ï¼šç‹ä¸œ             é¡¹ç›®åœ°å€ï¼šhttps://github.com/wangdong/AM2321
 
-	DS3231ÊµÊ±Ê±ÖÓ¿â
-	×÷Õß£ºpamisisi         ÏîÄ¿µØÖ·£ºhttps://github.com/pamisisi/arduino-DS3231RTC
+	DS3231å®æ—¶æ—¶é’Ÿåº“
+	ä½œè€…ï¼špamisisi         é¡¹ç›®åœ°å€ï¼šhttps://github.com/pamisisi/arduino-DS3231RTC
 
-	»¹ÓĞÒ»Ğ©À´×ÔÌÔ±¦¼éÉÌµÄÀà¿â£¬ËüÃÇµÄ×÷Õß°³»¹²»ÖªµÀàÏ£¨·´Õı²»ÊÇÌÔ±¦¼éÉÌ×Ô¼ºĞ´µÄ£©£¬ÏÈĞ»Ğ»ËûÃÇÀ²£¡
+	è¿˜æœ‰ä¸€äº›æ¥è‡ªæ·˜å®å¥¸å•†çš„ç±»åº“ï¼Œå®ƒä»¬çš„ä½œè€…ä¿ºè¿˜ä¸çŸ¥é“å˜ï¼ˆåæ­£ä¸æ˜¯æ·˜å®å¥¸å•†è‡ªå·±å†™çš„ï¼‰ï¼Œå…ˆè°¢è°¢ä»–ä»¬å•¦ï¼
 
 	Jackson's comment on Feb 19 2015:
 	There was something wrong on our computers' visual studio before and I couldn't install Visual Micro plugin, so I had to use Arduino offical IDE
@@ -36,10 +36,10 @@
 	If you find any bugs like grammar issue in the comment, please tell me! THX!!!
 
 
-	2015-2-19ÌØ±ğËµÃ÷£º
-	ÓÉÓÚÖ®Ç°µçÄÔÓĞÎÊÌâ×°²»ÉÏVisual StudioµÄArduino¿ª·¢²å¼ş£¬Òò´ËÔÚ´ËÖ®Ç°µÄ´úÂëÈ«²¿Ê¹ÓÃArduinoµÄ¹Ù·½IDE±àĞ´£¬¶ø¹Ù·½IDEÎŞ·¨ÊäÈëÖĞÎÄ£¬
-	ÎªÁË·½±ãÆğ¼û£¬ÎÒ¾ÍÖ±½Ó´òÓ¢ÎÄ×¢ÊÍÁË¡£½ñÌì¿ªÊ¼ÂıÂı°Ñ²¿·Ö±È½ÏÖØÒªµÄ×¢ÊÍºº»¯£¬µ«»á±£ÁôÔ­ÓĞµÄÓ¢ÎÄ¡£
-	ÁíÍâ°³Ó¢ÓïË®Æ½²»Õ¦µØ£¬ÕıÃ¦×ÅÈ¥Ñ§ÑÅË¼È¥¶ñ²¹ÄØ£¬ÈôÓĞÓ¢Óï´óÉñÂ·¹ı·¢ÏÖ×¢ÊÍÀïÓĞÓï·¨´íÎóÇë¸æËßÎÒ£¡ÔÚ´Ë¶àĞ»£¡
+	2015-2-19ç‰¹åˆ«è¯´æ˜ï¼š
+	ç”±äºä¹‹å‰ç”µè„‘æœ‰é—®é¢˜è£…ä¸ä¸ŠVisual Studioçš„Arduinoå¼€å‘æ’ä»¶ï¼Œå› æ­¤åœ¨æ­¤ä¹‹å‰çš„ä»£ç å…¨éƒ¨ä½¿ç”¨Arduinoçš„å®˜æ–¹IDEç¼–å†™ï¼Œè€Œå®˜æ–¹IDEæ— æ³•è¾“å…¥ä¸­æ–‡ï¼Œ
+	ä¸ºäº†æ–¹ä¾¿èµ·è§ï¼Œæˆ‘å°±ç›´æ¥æ‰“è‹±æ–‡æ³¨é‡Šäº†ã€‚ä»Šå¤©å¼€å§‹æ…¢æ…¢æŠŠéƒ¨åˆ†æ¯”è¾ƒé‡è¦çš„æ³¨é‡Šæ±‰åŒ–ï¼Œä½†ä¼šä¿ç•™åŸæœ‰çš„è‹±æ–‡ã€‚
+	å¦å¤–ä¿ºè‹±è¯­æ°´å¹³ä¸å’‹åœ°ï¼Œæ­£å¿™ç€å»å­¦é›…æ€å»æ¶è¡¥å‘¢ï¼Œè‹¥æœ‰è‹±è¯­å¤§ç¥è·¯è¿‡å‘ç°æ³¨é‡Šé‡Œæœ‰è¯­æ³•é”™è¯¯è¯·å‘Šè¯‰æˆ‘ï¼åœ¨æ­¤å¤šè°¢ï¼
 */
 
 #include <AM2321.h>
