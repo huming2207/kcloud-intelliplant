@@ -233,5 +233,29 @@ Public Class Form1
     Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub CheckBox4_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox4.CheckedChanged
+        If CheckBox4.Checked = True Then
+            ComboBox8.Enabled = False
+        Else
+            ComboBox8.Enabled = True
+        End If
+    End Sub
+
+    Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged
+        If CheckBox5.Checked = True Then
+            ComboBox1.Enabled = False
+        Else
+            ComboBox1.Enabled = True
+        End If
+    End Sub
+
+    Private Sub CheckBox6_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox6.CheckedChanged
+        If CheckBox6.Checked = True Then
+            ComboBox6.Enabled = False
+           Else
+            ComboBox6.Enabled = True
+        End If
+    End Sub
 End Class
 

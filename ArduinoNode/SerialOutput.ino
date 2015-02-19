@@ -1,10 +1,18 @@
 /* 
-    SHSS KCloud IntelliPlant Server (master) source code
-    Author: Jackson Ming Hu <huming2207@gmail.com>
-            Technical Club Union of Shenzhen Highschool of Science
-    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+	SHSS KCloud IntelliPlant Server (master) source code
+	Author: Jackson Ming Hu <huming2207@gmail.com>
+			Technical Club Union of Shenzhen Highschool of Science
+
+		深圳科学高中 科高云子项目 智慧农业物联网灌溉机
+		深圳科学高中技术类社团联合会自动化电子项目组
+		程序作者：胡铭 huming2207@gmail.com
+
+
+	***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+	本程序受LGPL协议保护，严禁商用。
     
-    SerialOutput.ino --->> Send the status & settings data to client (slave) side via wireless UART transmitter.
+    SerialOutput.ino --->> Send the status & debug data to indoor controller side via wireless UART transmitter.
+	                       向室内的主控器通过无线UART透传发送状态和调试信息
                        
 */
 

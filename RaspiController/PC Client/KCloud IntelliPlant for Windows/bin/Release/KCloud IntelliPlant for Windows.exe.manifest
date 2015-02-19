@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KCloud IntelliPlant for Windows.exe" size="1458576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KCloud IntelliPlant for Windows.exe" size="1459088">
       <assemblyIdentity name="KCloud IntelliPlant for Windows" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O0YhAkKumk2b+D+ZJsqME6bfJSNy9EoYw0VdJEzBk70=</dsig:DigestValue>
+        <dsig:DigestValue>95cwAqvGVlAApf39PZeV+H00Gr8h+QmVCKt73/+YC5U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

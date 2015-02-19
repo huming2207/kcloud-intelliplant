@@ -2,12 +2,20 @@
     SHSS KCloud IntelliPlant Server (master) source code
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Technical Club Union of Shenzhen Highschool of Science
-    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
-    
+           
+
+			深圳科学高中 科高云子项目 智慧农业物联网灌溉机
+			深圳科学高中技术类社团联合会自动化电子项目组
+			程序作者：胡铭 huming2207@gmail.com
+			
+
+    ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+        本程序受LGPL协议保护，严禁商用。
     SolarMonitor.ino --->> Get the data from ACS712 current sensor & some analog voltage sensor module.
                        Then convert the data to the intensity of light and calculate the pump's water capacity.
                        Also it can monitor the status of the solar pannel.
-                       
+                       从某些电流电压传感器模块获取数据，并根据数据判断太阳能系统所受光的大致强度并加入当天的天气情况计算（待完善）。
+					   同时也监控光伏发电板的各项数据确保安全正常工作
 */
 
 

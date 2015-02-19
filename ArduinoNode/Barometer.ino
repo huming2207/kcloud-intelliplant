@@ -3,12 +3,21 @@
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Technical Club Union of Shenzhen Highschool of Science
             ...and some unknown guys including the TAOBAO retailers, thanks them!!
-    ***THIS CODE IS PROTECTED BY GPLv2 LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
-    
+
+			深圳科学高中 科高云子项目 智慧农业物联网灌溉机
+			深圳科学高中技术类社团联合会自动化电子项目组
+			程序作者：胡铭 huming2207@gmail.com
+			
+
+    ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
+        本程序受LGPL协议保护，严禁商用。
+
     Barometer.ino -->> A tiny BOSCH BMP085/180 barometer library
                        Ported from Mosquito Multi Ground station project
-                       Originally from the retailer's AVR & STM32 example source code.
+                       Originally from the retailer's AVR example source code.
                        Compared with other BMP085/180 barometer libraries, this library uses less RAM and has a better performance.
+					   来自淘宝奸商AVR程序精简改进的博世BMP085/180气压计类库，迁移自蚊子地面站项目，
+					   相比其他Arduino的博世气压计库，它更节约存储空间和内存。
                        
 */
 void bmp085Calibration()
