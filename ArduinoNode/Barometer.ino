@@ -75,8 +75,15 @@ long bmp085GetPressure(unsigned long up){
   x2 = (-7357 * p)>>16;
   p += (x1 + x2 + 3791)>>4;
 
-  long temp = p;
-  return temp;
+  long baro;
+  unsigned long i;
+  unsigned long filter_sum = 0;
+  for (i = 0; i < 5; i++) {
+	  filter_sum += p;
+	  delay(1);
+  }
+  baro = long(filter_sum / 5);
+  return baro;
 }
 
 char bmp085Read(unsigned char address)
