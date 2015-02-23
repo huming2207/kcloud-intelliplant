@@ -27,6 +27,7 @@ def readlineCR(port):
         if ch=='\r' or ch=='':
             return rv
 
+#测试串口是否可用
 port = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=0.3)
 if port.isOpen == False:
     print "Serial port is unavailable, Exit..."
@@ -42,6 +43,8 @@ def getcputemperature():
 def getcpuused():
     return(os.popen("top -n1"))
 
+
+#获取运行方式，如果收到客户端发送带参数的指令，则进入设置模式
 if len(sys.argv) > 1:
 	Hr1 = config.get('Schedule1', 'Hr')
 	Min1 = config.get('Schedule1', 'Min')
@@ -66,12 +69,13 @@ if len(sys.argv) > 1:
 	Schedule2_payload = '3,' + Hr2 + ',' + Min2 + ',' + Sec2 + ',' + Capacity2 + ',' + MainSwitch2 + ',' + AutoSwitch2 + '\r\n'
 	Schedule3_payload = '4,' + Hr3 + ',' + Min3 + ',' + Sec3 + ',' + Capacity3 + ',' + MainSwitch3 + ',' + AutoSwitch3 + '\r\n'
 	Ratio_payload = '7,' + Ratio +  '\r\n'
+    Time_payload = '1,' + time.strftime("%Y") + ',' + time.strftime("%m") + ',' + time.strftime("%d") + ',' + time.strftime("%H") + ',' + time.strftime("%M") + ',' + time.strftime("%S") + ',' + time.strftime("%w") + '\r\n'
 	print "Now setting up the node."
 	print Schedule1_payload
 	print Schedule2_payload
 	print Schedule3_payload
 	print Ratio_payload
-	port.write(Schedule1_payload)
+	port.writeSchedule1_payload
 	print "......30%"
 	time.sleep(2)
 	port.write(Schedule2_payload)
@@ -82,10 +86,14 @@ if len(sys.argv) > 1:
 	time.sleep(2)
 	port.write(Ratio_payload)
 	print "....................DONE!!!!!!"
+    print "Setting the time..."
+    time.sleep(2)
+    port.write(Time_payload)
 	print "Now, re-run the program please!"
 	time.sleep(2)
+    exit()
 
-	
+print "AQI/ppm  Humid/RTH%  Temperature/℃  Baro/Pa  CPU-Temp/℃  CPU-Used/%   RAM-Used/%"
 
 
 #吃了炫迈一样停不下来的循环
@@ -109,7 +117,8 @@ if __name__=='__main__':
             humid_payload = {'value':rcv_split[2]}
             temp_payload = {'value':rcv_split[3]}
             baro_payload = {'value':filter(str.isdigit, rcv_split[4])}
-		#有些时候节点会发过来一些很奇怪的数据，这时可能是它死机或出错了，所以这里就发一个指令让它重启一下试试。
+	
+        #有些时候节点会发过来一些很奇怪的数据，这时可能是它死机或出错了，所以这里就发一个指令让它重启一下试试。
         except IndexError:
             port.write("8,1\r\n")
             print "***Caught an error or unreadable data from the node, rebooting the node by default."
@@ -123,26 +132,27 @@ if __name__=='__main__':
 	
         #上传灰尘传感器数据
         r=requests.post(dust_apiurl, headers=apiheaders, data=json.dumps(dust_payload))
-        print dust_payload
-	
+        print rcv_split[1],
+	print "      ",
         #上传湿度传感器数据
         r=requests.post(humid_apiurl, headers=apiheaders, data=json.dumps(humid_payload))
-        print humid_payload
-
+        print rcv_split[2],
+        print "      ",
         #上传温度传感器数据
         r=requests.post(temp_apiurl, headers=apiheaders, data=json.dumps(temp_payload))
-        print temp_payload
-
+        print rcv_split[3],
+        print "         ",
         #上传气压传感器数据
         r=requests.post(baro_apiurl, headers=apiheaders, data=json.dumps(baro_payload))
-        print baro_payload
-	
+        print filter(str.isdigit, rcv_split[4]),
+        print "      ",
 
         #上传cpu温度
         cpu_temp=getcputemperature()
         cputemp_payload={'value':cpu_temp}
         r=requests.post(cputemp_apiurl, headers=apiheaders, data=json.dumps(cputemp_payload))
-        print cpu_temp
+        print cpu_temp,
+        print "      ",
 	
 	
 
@@ -155,7 +165,9 @@ if __name__=='__main__':
                 cpulineused=cpuline.split(":")[1].split(",")[0].split(" ")[-2]
                 cpuused_payload={'value':cpulineused}
                 r=requests.post(cpuused_apiurl, headers=apiheaders, data=json.dumps(cpuused_payload))
-                print "CPU USED %:"+cpulineused
+                print cpulineused,
+                print "      ",
+
             if "Mem:" in cpuline:
                #提取数值，仅用字符串操作时，发现在数值前后有多个不可见字符，这里没怎么搞清楚这些字符是些什么
                 memlineused=cpuline.split(":")[1].split(",")[1].strip("used").split(" ")[-2]
@@ -166,5 +178,5 @@ if __name__=='__main__':
                 r=requests.post(memeryused_apiurl, headers=apiheaders, data=json.dumps(memeryused_payload))
                 
                 print memeryusedratiostr
-                print "================"
-        time.sleep(3)
+                
+        time.sleep(1)
