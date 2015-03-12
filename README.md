@@ -22,11 +22,11 @@ The controller can get the node's data by wireless UART serial port and then dis
 
 IntelliPlant 是一个深圳科学高中“科高云”项目的子项目,这是一个基于Arduino的开源农作物管理系统，此项目主要由深圳科学高中技术社团联合会（IT社）的 胡铭 负责维护更新。
 
-它包括两个部分，一个是主机，一个是从机，主机用Arduino Uno或ProMini，从机用Arduino Mega。
+它包括两个部分，一个是主控器，一个是节点，主机用Arduino Uno或ProMini，从机用Arduino Mega。
 
-服务端有一个温湿度传感器、一个气压传感器和一个空气质量传感器，并且它能依据当天天气情况自动计算植物灌溉水量。
+每个节点有一个温湿度传感器、一个气压传感器和一个空气质量传感器，并且它能依据当天天气情况自动计算植物灌溉水量。
 
-客户端通过无线串口透传模块传输数据，并将实时天气情况显示出来并发送到YeeLink物联网平台上。
+主控器通过无线串口透传模块传输数据，并将实时天气情况显示出来并发送到YeeLink物联网平台上。
 
 
 =========
