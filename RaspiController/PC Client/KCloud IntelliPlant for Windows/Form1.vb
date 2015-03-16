@@ -25,7 +25,7 @@ End Module
 
 Public Class Form1
     Dim ssh As New ChilkatSsh()
-    Dim sftp As New ChilkatSFtp
+    Dim sftp As New ChilkatSFtp()
     Dim success As Boolean
     Dim channelNum As Long
 
@@ -99,6 +99,10 @@ Public Class Form1
         MsgBox("成功联机，请进行下一步操作！", 0, "恭喜！")
         Button9.Enabled = True
         Button1.Enabled = False
+        TabPage2.Enabled = True
+        TabPage3.Enabled = True
+        TabPage2.Show()
+
     End Sub
 
 
@@ -110,7 +114,9 @@ Public Class Form1
         End If
         RichTextBox4.AppendText("KCloud IntelliPlant 智慧植物客户端 版本1.0" + vbCrLf)
         RichTextBox4.AppendText("深圳科学高中 2015 By IT社 胡铭 Jackson Ming Hu <huming2207@gmail.com>" + vbCrLf)
-        RichTextBox4.AppendText("本程序受GPLv2协议保护，严禁商用。" + vbCrLf)
+        RichTextBox4.AppendText("本程序受LGPL协议保护，严禁商用。" + vbCrLf)
+        TabPage2.Enabled = False
+        TabPage3.Enabled = False
     End Sub
 
 
@@ -257,5 +263,7 @@ Public Class Form1
             ComboBox6.Enabled = True
         End If
     End Sub
+
+
 End Class
 

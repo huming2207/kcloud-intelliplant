@@ -30,3 +30,19 @@ D:\软件工程\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlan
 D:\软件工程\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.vbproj.GenerateResource.Cache
 D:\软件工程\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.exe.manifest
 D:\软件工程\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.application
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe.config
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.vbproj.ResolveComReference.cache
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.exe
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.xml
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.pdb
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud_IntelliPlant_for_Windows.Form1.resources
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud_IntelliPlant_for_Windows.Resources.resources
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.vbproj.GenerateResource.Cache
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\Interop.CHILKATSSHLib.dll
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe.manifest
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.application
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.exe
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.pdb
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\bin\Release\KCloud IntelliPlant for Windows.xml
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.exe.manifest
+F:\项目\kcloud-intelliplant\RaspiController\PC Client\KCloud IntelliPlant for Windows\obj\Release\KCloud IntelliPlant for Windows.application
