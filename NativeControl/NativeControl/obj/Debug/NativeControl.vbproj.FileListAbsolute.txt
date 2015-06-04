@@ -1,0 +1,10 @@
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe.config
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.pdb
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.xml
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Form1.resources
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Resources.resources
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.vbproj.GenerateResource.Cache
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.exe
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.xml
+F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.pdb
