@@ -153,7 +153,7 @@ void BoardReset(){
   */
   
   /* 
-      Here, we can connect a wire between pin D7 and pin DTR (reset)
+      Here, we need to connect a wire between pin D7 and pin DTR (reset)
       According to my experiments, a pull-up resistor is unnecessary.
   */    
   digitalWrite(7, LOW);

@@ -2,22 +2,15 @@
     SHSS KCloud IntelliPlant Server (master) source code
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Technical Club Union of Shenzhen Highschool of Science
-           
-
-			ÉîÛÚ¿ÆÑ§¸ßÖĞ ¿Æ¸ßÔÆ×ÓÏîÄ¿ ÖÇ»ÛÅ©ÒµÎïÁªÍø¹à¸È»ú
-			ÉîÛÚ¿ÆÑ§¸ßÖĞ¼¼ÊõÀàÉçÍÅÁªºÏ»á×Ô¶¯»¯µç×ÓÏîÄ¿×é
-			³ÌĞò×÷Õß£ººúÃú huming2207@gmail.com
+            ...and some unknown guys including the TAOBAO retailers, thanks them!!
+			æ·±åœ³ç§‘å­¦é«˜ä¸­ ç§‘é«˜äº‘å­é¡¹ç›® æ™ºæ…§å†œä¸šç‰©è”ç½‘çŒæº‰æœº
+			æ·±åœ³ç§‘å­¦é«˜ä¸­æŠ€æœ¯ç±»ç¤¾å›¢è”åˆä¼šè‡ªåŠ¨åŒ–ç”µå­é¡¹ç›®ç»„
+			ç¨‹åºä½œè€…ï¼šèƒ¡é“­ huming2207@gmail.com
 			
-
     ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
-        ±¾³ÌĞòÊÜLGPLĞ­Òé±£»¤£¬ÑÏ½ûÉÌÓÃ¡£
-    SolarMonitor.ino --->> Get the data from ACS712 current sensor & some analog voltage sensor module.
-                       Then convert the data to the intensity of light and calculate the pump's water capacity.
-                       Also it can monitor the status of the solar pannel.
-                       ´ÓÄ³Ğ©µçÁ÷µçÑ¹´«¸ĞÆ÷Ä£¿é»ñÈ¡Êı¾İ£¬²¢¸ù¾İÊı¾İÅĞ¶ÏÌ«ÑôÄÜÏµÍ³ËùÊÜ¹âµÄ´óÖÂÇ¿¶È²¢¼ÓÈëµ±ÌìµÄÌìÆøÇé¿ö¼ÆËã£¨´ıÍêÉÆ£©¡£
-					   Í¬Ê±Ò²¼à¿Ø¹â·ü·¢µç°åµÄ¸÷ÏîÊı¾İÈ·±£°²È«Õı³£¹¤×÷
+        æœ¬ç¨‹åºå—LGPLåè®®ä¿æŠ¤ï¼Œä¸¥ç¦å•†ç”¨ã€‚
+                       
 */
-
 
 
 long InputVcc() {

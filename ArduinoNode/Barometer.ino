@@ -3,21 +3,18 @@
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Technical Club Union of Shenzhen Highschool of Science
             ...and some unknown guys including the TAOBAO retailers, thanks them!!
-
-			ÉîÛÚ¿ÆÑ§¸ßÖĞ ¿Æ¸ßÔÆ×ÓÏîÄ¿ ÖÇ»ÛÅ©ÒµÎïÁªÍø¹à¸È»ú
-			ÉîÛÚ¿ÆÑ§¸ßÖĞ¼¼ÊõÀàÉçÍÅÁªºÏ»á×Ô¶¯»¯µç×ÓÏîÄ¿×é
-			³ÌĞò×÷Õß£ººúÃú huming2207@gmail.com
+			æ·±åœ³ç§‘å­¦é«˜ä¸­ ç§‘é«˜äº‘å­é¡¹ç›® æ™ºæ…§å†œä¸šç‰©è”ç½‘çŒæº‰æœº
+			æ·±åœ³ç§‘å­¦é«˜ä¸­æŠ€æœ¯ç±»ç¤¾å›¢è”åˆä¼šè‡ªåŠ¨åŒ–ç”µå­é¡¹ç›®ç»„
+			ç¨‹åºä½œè€…ï¼šèƒ¡é“­ huming2207@gmail.com
 			
-
     ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
-        ±¾³ÌĞòÊÜLGPLĞ­Òé±£»¤£¬ÑÏ½ûÉÌÓÃ¡£
-
+        æœ¬ç¨‹åºå—LGPLåè®®ä¿æŠ¤ï¼Œä¸¥ç¦å•†ç”¨ã€‚
     Barometer.ino -->> A tiny BOSCH BMP085/180 barometer library
                        Ported from Mosquito Multi Ground station project
                        Originally from the retailer's AVR example source code.
                        Compared with other BMP085/180 barometer libraries, this library uses less RAM and has a better performance.
-					   À´×ÔÌÔ±¦¼éÉÌAVR³ÌĞò¾«¼ò¸Ä½øµÄ²©ÊÀBMP085/180ÆøÑ¹¼ÆÀà¿â£¬Ç¨ÒÆ×ÔÎÃ×ÓµØÃæÕ¾ÏîÄ¿£¬
-					   Ïà±ÈÆäËûArduinoµÄ²©ÊÀÆøÑ¹¼Æ¿â£¬Ëü¸ü½ÚÔ¼´æ´¢¿Õ¼äºÍÄÚ´æ¡£
+					   æ¥è‡ªæ·˜å®å¥¸å•†AVRç¨‹åºç²¾ç®€æ”¹è¿›çš„åšä¸–BMP085/180æ°”å‹è®¡ç±»åº“ï¼Œè¿ç§»è‡ªèšŠå­åœ°é¢ç«™é¡¹ç›®ï¼Œ
+					   ç›¸æ¯”å…¶ä»–Arduinoçš„åšä¸–æ°”å‹è®¡åº“ï¼Œå®ƒæ›´èŠ‚çº¦å­˜å‚¨ç©ºé—´å’Œå†…å­˜ã€‚
                        
 */
 void bmp085Calibration()
