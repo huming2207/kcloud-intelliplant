@@ -1,5 +1,5 @@
 /* 
-    SHSS KCloud IntelliPlant Server (master) source code
+    SHSS KCloud IntelliPlant Node source code
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Technical Club Union of Shenzhen Highschool of Science
             ...and some unknown guys including the TAOBAO retailers, thanks them!!

@@ -1,5 +1,5 @@
 ﻿/* 
-    SHSS KCloud IntelliPlant Server (master) source code
+    SHSS KCloud IntelliPlant Node source code
     Author: Jackson Ming Hu <huming2207@gmail.com>
             Automation Electronic Project Group, Technical Club Union of Shenzhen Highschool of Science
     ***THIS CODE IS PROTECTED BY LGPL LICENCE, FOR NON-COMMERCIAL USE ONLY! ***
@@ -29,17 +29,6 @@
 
 	还有一些来自淘宝奸商的类库，它们的作者俺还不知道嘞（反正不是淘宝奸商自己写的），先谢谢他们啦！
 
-	Jackson's comment on Feb 19 2015:
-	There was something wrong on our computers' visual studio before and I couldn't install Visual Micro plugin, so I had to use Arduino offical IDE
-	but the Arduino IDE is still buggy when typing in Chinese words, so then I had to use English to write all the source code including its comments.
-	Also, sorry for my weird English, I'm busy learning IELTS and make it better. 
-	If you find any bugs like grammar issue in the comment, please tell me! THX!!!
-
-
-	2015-2-19特别说明：
-	由于之前电脑有问题装不上Visual Studio的Arduino开发插件，因此在此之前的代码全部使用Arduino的官方IDE编写，而官方IDE无法输入中文，
-	为了方便起见，我就直接打英文注释了。今天开始慢慢把部分比较重要的注释汉化，但会保留原有的英文。
-	另外俺英语水平不咋地，正忙着去学雅思去恶补呢，若有英语大神路过发现注释里有语法错误请告诉我！在此多谢！
 */
 
 #include <AM2321.h>
