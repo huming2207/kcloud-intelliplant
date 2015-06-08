@@ -8,3 +8,13 @@ F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeContro
 F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.exe
 F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.xml
 F:\文稿\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.pdb
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe.config
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.exe
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.xml
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.pdb
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Form1.resources
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Resources.resources
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.vbproj.GenerateResource.Cache
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.pdb
+D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.xml
