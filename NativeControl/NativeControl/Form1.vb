@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-
+    Dim rx As String
+    Dim TextIncome() As String
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
@@ -43,8 +44,47 @@
         End Try
     End Sub
 
- 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each sp As String In My.Computer.Ports.SerialPortNames
+            ComboBox1.Items.Add(sp)
+        Next
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+    Private Sub Serial_Receiving(ByVal sender As Object, ByVal e As EventArgs)
+        ' Dim strIncoming As String
+        Try
+            If SerialPort1.BytesToRead > 0 Then
+                Threading.Thread.Sleep(100) ' 让线程延时一下
+
+                Try
+                    rx = SerialPort1.ReadLine() ' 赋上串口接收到的数据
+                Catch ex As TimeoutException
+                    rx = SerialPort1.ReadExisting()
+                End Try
+                TextBox1.AppendText(rx + vbCrLf)
+                TextIncome = Split(rx, ",")
+                Select Case TextIncome(0)
+                    Case "1"
+                        Label3.Text = TextIncome(3)
+                        Label4.Text = TextIncome(2)
+                        Label6.Text = TextIncome(4)
+                    Case "2"
+                        MsgBox("预设灌溉指令执行中" + vbCrLf + "指令时间" + TextIncome(1) + ":" + TextIncome(2) + "  编号#" + TextIncome(3))
+                End Select
+
+
+                SerialPort1.DiscardInBuffer()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 
     End Sub
 End Class
