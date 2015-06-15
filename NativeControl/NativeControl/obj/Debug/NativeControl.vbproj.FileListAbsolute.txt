@@ -19,12 +19,13 @@ D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\Native
 D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.pdb
 D:\软件工程\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.xml
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe.config
-C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.exe
-C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.xml
-C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.pdb
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.exe
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.pdb
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\bin\Debug\NativeControl.xml
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Form1.resources
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Resources.resources
 C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.vbproj.GenerateResource.Cache
+C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.exe
+C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.xml
+C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.pdb
+C:\Users\hu\Documents\Projects\kcloud-intelliplant\NativeControl\NativeControl\obj\Debug\NativeControl.Form2.resources

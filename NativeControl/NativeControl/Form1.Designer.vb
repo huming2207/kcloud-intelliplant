@@ -43,6 +43,9 @@ Partial Class Form1
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -54,7 +57,6 @@ Partial Class Form1
         Me.ComboBox9 = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -65,7 +67,6 @@ Partial Class Form1
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.ComboBox7 = New System.Windows.Forms.ComboBox()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -88,6 +89,7 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -310,6 +312,9 @@ Partial Class Form1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.CheckBox7)
+        Me.GroupBox4.Controls.Add(Me.CheckBox6)
+        Me.GroupBox4.Controls.Add(Me.CheckBox5)
         Me.GroupBox4.Controls.Add(Me.Button7)
         Me.GroupBox4.Controls.Add(Me.Label20)
         Me.GroupBox4.Controls.Add(Me.Label21)
@@ -321,7 +326,6 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.ComboBox9)
         Me.GroupBox4.Controls.Add(Me.Label24)
         Me.GroupBox4.Controls.Add(Me.ComboBox10)
-        Me.GroupBox4.Controls.Add(Me.Label25)
         Me.GroupBox4.Controls.Add(Me.Label14)
         Me.GroupBox4.Controls.Add(Me.Label15)
         Me.GroupBox4.Controls.Add(Me.TextBox4)
@@ -332,7 +336,6 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.ComboBox6)
         Me.GroupBox4.Controls.Add(Me.Label18)
         Me.GroupBox4.Controls.Add(Me.ComboBox7)
-        Me.GroupBox4.Controls.Add(Me.Label19)
         Me.GroupBox4.Controls.Add(Me.Label13)
         Me.GroupBox4.Controls.Add(Me.Label12)
         Me.GroupBox4.Controls.Add(Me.TextBox3)
@@ -353,9 +356,39 @@ Partial Class Form1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "水泵定时"
         '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(17, 214)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(132, 35)
+        Me.CheckBox7.TabIndex = 36
+        Me.CheckBox7.Text = "时间3："
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(16, 136)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(132, 35)
+        Me.CheckBox6.TabIndex = 35
+        Me.CheckBox6.Text = "时间2："
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(16, 56)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(132, 35)
+        Me.CheckBox5.TabIndex = 34
+        Me.CheckBox5.Text = "时间1："
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(365, 299)
+        Me.Button7.Location = New System.Drawing.Point(365, 297)
         Me.Button7.Margin = New System.Windows.Forms.Padding(5)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(603, 76)
@@ -465,16 +498,6 @@ Partial Class Form1
         Me.ComboBox10.Size = New System.Drawing.Size(124, 39)
         Me.ComboBox10.TabIndex = 23
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(43, 224)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(100, 31)
-        Me.Label25.TabIndex = 22
-        Me.Label25.Text = "时间3："
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -576,16 +599,6 @@ Partial Class Form1
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(124, 39)
         Me.ComboBox7.TabIndex = 12
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(43, 147)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(100, 31)
-        Me.Label19.TabIndex = 11
-        Me.Label19.Text = "时间2："
         '
         'Label13
         '
@@ -695,12 +708,12 @@ Partial Class Form1
         Me.Label8.Location = New System.Drawing.Point(43, 64)
         Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(100, 31)
+        Me.Label8.Size = New System.Drawing.Size(0, 31)
         Me.Label8.TabIndex = 0
-        Me.Label8.Text = "时间1："
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.Button9)
         Me.GroupBox7.Controls.Add(Me.Button6)
         Me.GroupBox7.Controls.Add(Me.Button5)
         Me.GroupBox7.Controls.Add(Me.Button4)
@@ -716,40 +729,40 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(1072, 67)
+        Me.Button6.Location = New System.Drawing.Point(859, 67)
         Me.Button6.Margin = New System.Windows.Forms.Padding(5)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(227, 124)
+        Me.Button6.Size = New System.Drawing.Size(178, 124)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "强行关闭水泵"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(835, 67)
+        Me.Button5.Location = New System.Drawing.Point(657, 67)
         Me.Button5.Margin = New System.Windows.Forms.Padding(5)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(227, 124)
+        Me.Button5.Size = New System.Drawing.Size(192, 124)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "强行启动水泵"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(548, 67)
+        Me.Button4.Location = New System.Drawing.Point(471, 67)
         Me.Button4.Margin = New System.Windows.Forms.Padding(5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(227, 124)
+        Me.Button4.Size = New System.Drawing.Size(177, 124)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "强行重置设备"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(45, 67)
+        Me.Button3.Location = New System.Drawing.Point(26, 67)
         Me.Button3.Margin = New System.Windows.Forms.Padding(5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(452, 124)
+        Me.Button3.Size = New System.Drawing.Size(435, 124)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "时间校准" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "点击此将发送计算机的时间给目标节点"
         Me.Button3.UseVisualStyleBackColor = True
@@ -809,6 +822,16 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "调试数据接收"
         '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(1123, 67)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(5)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(178, 124)
+        Me.Button9.TabIndex = 6
+        Me.Button9.Text = "关于本程序"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
@@ -823,7 +846,7 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
-        Me.Text = "HuStudio IntelliPlant 本地调试工具"
+        Me.Text = "HuStudio IntelliPlant 本地调试与设置工具"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -893,7 +916,6 @@ Partial Class Form1
     Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
@@ -904,7 +926,10 @@ Partial Class Form1
     Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button9 As System.Windows.Forms.Button
 
 End Class
