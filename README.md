@@ -46,6 +46,6 @@ Arduino software development: Jackson Ming Hu
 
 PC Client development & advising: Jackson Ming Hu, Junhao Liang
 
-Hardware design: Yichuan Lee
+Shield design: Yichuan Lee
 
 This project is a open source project and all the source code are protected by GPLv2 licence.
